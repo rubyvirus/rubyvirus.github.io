@@ -1,5 +1,5 @@
 ---
-title: *args,**kwargs 元组\字典入参
+title: args,kwargs 元组字典入参
 tag: python 进阶
 ---
 ### 什么是*args, **kwargs
