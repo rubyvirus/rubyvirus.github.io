@@ -1,5 +1,5 @@
 ---
-title: open-stf 安装篇（linux）
+title: [open-stf](https://github.com/openstf/stf) 安装篇（linux）
 tag: open-stf
 ---
 
@@ -67,6 +67,9 @@ sudo stow -vv zeromq-4.2.3
 
 ## 6.安装 Google protobuf
 ```
+sudo apt-get install build-essential
+sudo apt-get install dh-autoreconf
+
 cd ~/Downloads
 git clone https://github.com/google/protobuf.git
 cd protobuf
@@ -122,8 +125,29 @@ http://<your_ip_address>:7100
 
 
 # 第二种 docker安装方式
+## 1.安装docker
+[详见官方文档](https://docs.docker.com/engine/installation/linux/docker-ce/debian/)
+## 2.拉去镜像
+```
+sudo docker pull openstf/stf:latest # STF镜像
+sudo docker pull sorccu/adb:latest # android adb 镜像
+sudo docker pull rethinkdb:latest # rethinkdb 镜像
+sudo docker pull openstf/ambassador:latest
+sudo docker pull nginx:latest # nginx 代理镜像
+```
+## 3.检查镜像
+```
+sudo docker images
+```
 
+## 4.启动镜像
+```
+- docker run -d --name rethinkdb -v /srv/rethinkdb:/data --net host rethinkdb rethinkdb --bind all --cache-size 8192 --http-port 8090
+- docker run -d --name adbd --privileged -v /dev/bus/usb:/dev/bus/usb --net host sorccu/adb:latest
+- docker run -d --name stf --net host openstf/stf stf local --public-ip <your-ip>
 
+- sudo docker ps -a
+```
 
 
 * * *
