@@ -1,6 +1,6 @@
 ---
 title: args,kwargs 元组字典入参
-tag: python 进阶
+tag: python
 ---
 ### 什么是*args, **kwargs
 1. args,kwargs 前面的* ** 是关键

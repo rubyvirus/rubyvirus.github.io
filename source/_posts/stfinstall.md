@@ -1,5 +1,5 @@
 ---
-title: open-stf 安装篇（linux）
+title: [open-stf](https://github.com/openstf/stf) 安装篇（linux）
 tag: open-stf
 ---
 
@@ -145,7 +145,6 @@ sudo docker images
 - docker run -d --name rethinkdb -v /srv/rethinkdb:/data --net host rethinkdb rethinkdb --bind all --cache-size 8192 --http-port 8090
 - docker run -d --name adbd --privileged -v /dev/bus/usb:/dev/bus/usb --net host sorccu/adb:latest
 - docker run -d --name stf --net host openstf/stf stf local --public-ip <your-ip>
-
 - sudo docker ps -a
 ```
 
