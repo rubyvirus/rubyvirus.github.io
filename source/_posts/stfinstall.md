@@ -1,5 +1,5 @@
 ---
-title: [open-stf](https://github.com/openstf/stf) 安装篇（linux）
+title: open-stf 安装篇（linux）
 tag: open-stf
 ---
 
