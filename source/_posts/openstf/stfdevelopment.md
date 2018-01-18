@@ -1,6 +1,6 @@
 ---
 title: openstf免登录
-tag: opens-tf
+tag: open-stf
 ---
 openstf已经很流行了，有个需求，需要把openstf介入到现有系统中，直接跳转到设备管理页面， 话不多说，直接上代码
 
