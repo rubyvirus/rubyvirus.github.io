@@ -2,7 +2,7 @@
 title: openstf免登录
 tag: open-stf
 ---
-openstf已经很流行了，有个需求，需要把openstf介入到现有系统中，直接跳转到设备管理页面， 话不多说，直接上代码
+openstf已经很流行了现在有个需求，需要把openstf介入到现有系统中，直接跳转到设备管理页面， 话不多说，直接上代码
 
 ### 以下为stf源码中mock登录
 ```
