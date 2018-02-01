@@ -1,7 +1,6 @@
 ---
 title: openstf二次开发之分析源码第一篇(登录组件)
 tag: open-stf
-datatime: 2018-01-26
 ---
 
 ## 前言
@@ -51,11 +50,12 @@ open-stf用的是模块化开发，通过webpack.config.js可以知道app, authl
     └── index.pug
 - 首先需要了解的是entry.js(webpack)入口配置点，[webpack详细配置说明](http://www.css88.com/doc/webpack2/guides/code-splitting-require)
 包含两个部分，
-一是依赖的模块 
-require('nine-bootstrap')
+  一是依赖的模块
+  require('nine-bootstrap')
   require('angular')
   require('angular-route')
   require('angular-touch')
+  require('./signin').name >> 首页模块
   二是angular模块的初始化和route配置
   ```
   $locationProvider.html5Mode -开启html5

@@ -73,3 +73,5 @@ sudo ldconfig
 ## 检查安装是否成功
 参考：
 http://wiki.opencv.org.cn/index.php/Debian%E4%B8%8B%E5%AE%89%E8%A3%85
+
+其它说明：https://www.pyimagesearch.com/opencv-tutorials-resources-guides/
