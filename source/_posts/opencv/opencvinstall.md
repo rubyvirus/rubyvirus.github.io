@@ -3,13 +3,12 @@ title: opencv安装(debian)
 tag: opencv
 ---
 opencv流行已久，下面来讲一波debian上安装说明
-## 从debian仓库安装
+## 从debian仓库安装依赖
 ```
 sudo apt-get install libopencv-dev python-opencv
 ```
 ## 通过以下脚本批量操作
 ```
-
 # 1. KEEP UBUNTU OR DEBIAN UP TO DATE
 
 sudo apt-get -y update
