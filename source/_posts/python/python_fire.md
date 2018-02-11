@@ -1,7 +1,7 @@
 ---
 title: pythonclitoolfire
 tag: python
-date: 2018-02-11
+date: 2017-12-10
 ---
 相信大家都是用过Python 众多的命令行支持工具，如：OptionParser, getopt, argparse, sys.argv 都大同小异，今天我们来看一个google 开源的CLi fire工具模块
 
