@@ -1,6 +1,7 @@
 ---
 title: macaca permission 解决方案
-tag: python
+tag: macaca
+date: 2018-02-11
 ---
 自动化测试安装APP时的提示信息，一直是一个棘手问题，还要macaca提供了目前来看比较完美的解决方案，通过UIAutomatorWD模块实施监控APP安装过程
 看UIAutomatorWD源码如下
