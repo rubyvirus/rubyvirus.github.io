@@ -1,5 +1,5 @@
 ---
-title: pythonclitoolfire
+title: python cli tool fire
 tag: python
 date: 2017-12-10
 ---
