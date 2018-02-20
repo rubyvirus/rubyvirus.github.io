@@ -15,8 +15,10 @@ tag: python
 - 并行是两个队列同时使用两台咖啡机
 理解并发或并行的关键在于CPU的使用情况，如果多个线程共用一个CPU交替执行任务就是并发，如果多个线程多个CPU交替执行就是并行，不难看出并行是并发的一个子集。
 [名称解释参考](https://www.zhihu.com/question/33515481)
+4. GIL: GIL全称Global Interpreter Lock, GIL并不是Python的特性，它是在实现Python解析器(CPython)时所引入的一个概念。就好比C++是一套语言（语法）标准，但是可以用不同的编译器来编译成可执行代码。有名的编译器例如GCC，INTEL C++，Visual C++等。Python也一样，同样一段代码可以通过CPython，PyPy，Psyco等不同的Python执行环境来执行。像其中的JPython就没有GIL。然而因为CPython是大部分环境下默认的Python执行环境。所以在很多人的概念里CPython就是Python，也就想当然的把GIL归结为Python语言的缺陷。所以这里要先明确一点：GIL并不是Python的特性，Python完全可以不依赖于GIL
 
 理解概念后，可以参考如下大佬们的分享，健步如飞。
+[理解python并发编程一篇就够了](https://zhuanlan.zhihu.com/p/25377631)
 [从0到1，Python异步编程的演进之路](https://zhuanlan.zhihu.com/p/25228075)
 [Python concurrent.future 使用教程及源码初剖](https://zhuanlan.zhihu.com/p/31544936)
 [Python多进程并行编程实践-multiprocessing模块](https://zhuanlan.zhihu.com/p/24960492)
