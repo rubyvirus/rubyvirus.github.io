@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Space Test Enginner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Space Test Enginner">
+<meta property="og:url" content="http://www.whatistest.com/page/2/index.html">
+<meta property="og:site_name" content="Space Test Enginner">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Space Test Enginner">
+  
+    <link rel="alternate" href="/atom.xml" title="Space Test Enginner" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Space Test Enginner</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">太空攻城狮</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.whatistest.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-python/python_generater" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/11/python/python_generater/" class="article-date">
+  <time datetime="2018-11-11T07:55:32.869Z" itemprop="datePublished">2018-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://python3-cookbook.readthedocs.io/zh_CN/latest/c09/p11_write_decorators_that_add_arguments_to_functions.html" target="_blank" rel="noopener">http://python3-cookbook.readthedocs.io/zh_CN/latest/c09/p11_write_decorators_that_add_arguments_to_functions.html</a></p>
+<p><a href="https://foofish.net/python-decorator.html" target="_blank" rel="noopener">https://foofish.net/python-decorator.html</a></p>
+<p><a href="http://www.cnblogs.com/wilber2013/p/4657155.html" target="_blank" rel="noopener">http://www.cnblogs.com/wilber2013/p/4657155.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/11/python/python_generater/" data-id="cjocl45gg001if8stfvaaq4hb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-python/python_kwargs" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/11/python/python_kwargs/" class="article-date">
+  <time datetime="2018-11-11T07:55:32.869Z" itemprop="datePublished">2018-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/11/python/python_kwargs/">args,kwargs 元组字典入参</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="什么是-args-kwargs"><a href="#什么是-args-kwargs" class="headerlink" title="什么是*args, **kwargs"></a>什么是*args, **kwargs</h3><ol>
+<li>args,kwargs 前面的* ** 是关键</li>
+<li>*args,**kwargs为用户函数定义函数参数（值传递），将不定数量的参数传递给一个函数<h4 id="args"><a href="#args" class="headerlink" title="*args"></a>*args</h4></li>
+<li>用来发送一个非键值对的可变数量的参数列表给一个函数</li>
+<li>例子<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def test_var_args(f_arg, *argv):</span><br><span class="line">    print(&quot;first normal arg:&quot;, f_arg)</span><br><span class="line">    for arg in argv:</span><br><span class="line">        print(&quot;another arg through *argv:&quot;, arg)</span><br><span class="line">test_var_args(&apos;yasoob&apos;, &apos;python&apos;, &apos;eggs&apos;, &apos;test&apos;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="kwargs"><a href="#kwargs" class="headerlink" title="**kwargs"></a>**kwargs</h4><ol>
+<li>允许你将不定长度的键值对, 作为参数传递给一个函数</li>
+<li>例子<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def greet_me(**kwargs):</span><br><span class="line">    for key, value in kwargs.items():</span><br><span class="line">        print(&quot;&#123;0&#125; == &#123;1&#125;&quot;.format(key, value))</span><br><span class="line">greet_me(name=&quot;yasoob&quot;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def print_arg(*args, **kwargs):</span><br><span class="line">    print(args)</span><br><span class="line">    print(kwargs)</span><br><span class="line">ag = (1, 2, 3)</span><br><span class="line">kag = &#123;&apos;1&apos;: 1, &apos;2&apos;: 2&#125;</span><br><span class="line">print_arg(1, ag, kag, first_kwargs=1)</span><br><span class="line">-</span><br><span class="line">(1, (1, 2, 3), &#123;&apos;1&apos;: 1, &apos;2&apos;: 2&#125;)</span><br><span class="line">&#123;&apos;first_kwargs&apos;: 1&#125;</span><br></pre></td></tr></table></figure>
+<p>标准参数与args,kwargs执行顺序,print_arg(1, ag, kag, first_kwargs=1) 从左往右依次解析。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/11/python/python_kwargs/" data-id="cjocl45gh001kf8stus3gitdj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-python/python_standard" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/11/python/python_standard/" class="article-date">
+  <time datetime="2018-11-11T07:55:32.869Z" itemprop="datePublished">2018-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/11/python/python_standard/">python 规范</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>专业的人做专业的事儿，python code standard 需要学会，话不多说，<a href="http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_language_rules/" target="_blank" rel="noopener">参考google分享内容</a></p>
+<p>特别记录一下python命名规范</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>column</th>
+<th>Internal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modules</td>
+<td>lower_with_under</td>
+<td>_lower_with_under</td>
+</tr>
+<tr>
+<td>Packages</td>
+<td>lower_with_under</td>
+</tr>
+<tr>
+<td>Classes</td>
+<td>CapWords</td>
+<td>_CapWords</td>
+</tr>
+<tr>
+<td>Exceptions</td>
+<td>CapWords</td>
+</tr>
+<tr>
+<td>Functions</td>
+<td>lower_with_under()</td>
+<td>_lower_with_under()</td>
+</tr>
+<tr>
+<td>Global/Class Constants</td>
+<td>CAPS_WITH_UNDER</td>
+<td>_CAPS_WITH_UNDER</td>
+</tr>
+<tr>
+<td>Global/Class Variables</td>
+<td>lower_with_under</td>
+<td>_lower_with_under</td>
+</tr>
+<tr>
+<td>Instance Variables</td>
+<td>lower_with_under</td>
+<td>_lower_with_under (protected) or __lower_with_under (private)</td>
+</tr>
+<tr>
+<td>Method Names</td>
+<td>lower_with_under()</td>
+<td>_lower_with_under() (protected) or __lower_with_under() (private)</td>
+</tr>
+<tr>
+<td>Function/Method</td>
+<td>Parameters</td>
+<td>lower_with_under</td>
+</tr>
+<tr>
+<td>Local</td>
+<td>Variables</td>
+<td>lower_with_under</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/11/python/python_standard/" data-id="cjocl45gn001xf8stxod1pch4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-python/python_subprocess" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/11/python/python_subprocess/" class="article-date">
+  <time datetime="2018-11-11T07:55:32.869Z" itemprop="datePublished">2018-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/11/python/python_subprocess/">python 调用系统命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>直接进入主题，使用subprocess模块调用，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import subprocess</span><br><span class="line">subprocess.Popen([&quot;ping&quot;, &quot;-c&quot;, &quot;5&quot;, &quot;www.baidu.com&quot;], shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>调用Popen方法</li>
+<li>shell表示我们使用了shell=True这个参数。这个时候，我们使用一整个字符串，而不是一个表来运行子进程。Python将先运行一个shell，再用这个shell来解释这整个字符串。<br>shell命令中有一些是shell的内建命令，这些命令必须通过shell运行，$cd。shell=True允许我们运行这样一些命令</li>
+<li>std表示子进程的标准输入，标准输出和标准错误</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/11/python/python_subprocess/" data-id="cjocl45go001zf8stol0jkzq8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-python/pythonorm_peewee" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/11/python/pythonorm_peewee/" class="article-date">
+  <time datetime="2018-11-11T07:55:32.869Z" itemprop="datePublished">2018-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/11/python/pythonorm_peewee/">python simple and small ORM Peewee(矮小的) 入门篇</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>python ORM 多种多样，如：Django ORM , SQLAlchemy , SqlObject , 今天我们来介绍一款小巧精悍框架，支持的数据库: sqlite,mysql,postgresql , 支持的Python版本: 2.6+ and 3.2+<br><a href="http://docs.peewee-orm.com/en/latest/index.html" target="_blank" rel="noopener">官方文档链接</a></p>
+<h3 id="1-安装peewee"><a href="#1-安装peewee" class="headerlink" title="1. 安装peewee"></a>1. 安装peewee</h3><ul>
+<li><p>pip<br><code>pip install peewee</code></p>
+</li>
+<li><p>source install</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/coleifer/peewee.git</span><br><span class="line">cd peewee</span><br><span class="line">python setup.py install</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-hello-world"><a href="#2-hello-world" class="headerlink" title="2. hello world"></a>2. hello world</h3><h4 id="hello-world-py"><a href="#hello-world-py" class="headerlink" title="hello_world.py"></a>hello_world.py</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">from peewee import *</span><br><span class="line"></span><br><span class="line">DB = SqliteDatabase(&apos;helloworld.db&apos;)</span><br><span class="line"></span><br><span class="line">class BaseModle(Modle):</span><br><span class="line">	&quot;&quot;&quot;</span><br><span class="line">	基础模型</span><br><span class="line"></span><br><span class="line">	&quot;&quot;&quot;</span><br><span class="line">	class Meta():</span><br><span class="line">		database = DB</span><br><span class="line"></span><br><span class="line">class HelloWorld(BaseModle):</span><br><span class="line">	&quot;&quot;&quot;</span><br><span class="line">	hello world模型</span><br><span class="line">	peewee模型及数据库表，表及模型</span><br><span class="line">	&quot;&quot;&quot;</span><br><span class="line">	hwid = PrimaryKeyField(unique=True)</span><br><span class="line">	hwcontent = CharField()</span><br><span class="line"></span><br><span class="line">	@classmethod</span><br><span class="line">	def save_info(cls, hw_content):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">			保存数据</span><br><span class="line">        &quot;&quot;</span><br><span class="line">		HelloWorld(hwcontent=hw_content).save()</span><br><span class="line"></span><br><span class="line">	@classmethod</span><br><span class="line">	def select_info(cls, hw_content=None):</span><br><span class="line">    	&quot;&quot;&quot;</span><br><span class="line">        	查询数据</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">		if hw_content:</span><br><span class="line">			cls.select().where(HelloWorld.hwcontent == hw_content)</span><br><span class="line">		else:</span><br><span class="line">			cls.select()</span><br></pre></td></tr></table></figure>
+<h4 id="test-hello-world-py"><a href="#test-hello-world-py" class="headerlink" title="test_hello_world.py"></a>test_hello_world.py</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">from hello_world import DB, HelloWorld</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def db_test():</span><br><span class="line">    DB.create_tables([HelloWorld], safe=True)</span><br><span class="line">    HelloWorld.save_info(&apos;hello world my peewee.&apos;)</span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    db_test()</span><br><span class="line">    for hw in HelloWorld.select_info():</span><br><span class="line">        print(hw.hwcontent)</span><br></pre></td></tr></table></figure>
+<p>done<br>重点理解peewee vs database 关系表</p>
+<table>
+<thead>
+<tr>
+<th>Thing</th>
+<th>Corresponds to…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model</td>
+<td>Database table</td>
+</tr>
+<tr>
+<td>Field instance</td>
+<td>Column on a table</td>
+</tr>
+<tr>
+<td>Model instance</td>
+<td>Row in a database table</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/11/python/pythonorm_peewee/" data-id="cjocl45gq0022f8sthtxasgg4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-tensorflow/similarity" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/11/tensorflow/similarity/" class="article-date">
+  <time datetime="2018-11-11T07:55:32.869Z" itemprop="datePublished">2018-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/11/tensorflow/similarity/">记录一次求图像相似度求解过程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本人测试一枚，对于APP 浏览器兼容性行业或现有平台都是对页面资源优化、页面加载时间等，对于不同手机、不同屏幕尺寸、不同app browser样式的兼容，没有给出明确的说明，说到这里我们就来求解这个问题。</p>
+<ol>
+<li>图像相似度的概念定义涉及内容很多，可以参考如下：<a href="http://www.jsjkx.com/jsjkx/ch/reader/create_pdf.aspx?file_no=20160615&amp;year_id=2016&amp;quarter_id=6&amp;falg=1" target="_blank" rel="noopener">http://www.jsjkx.com/jsjkx/ch/reader/create_pdf.aspx?file_no=20160615&amp;year_id=2016&amp;quarter_id=6&amp;falg=1</a></li>
+<li>图像相似度算法（一） 直方图<br><a href="http://blog.csdn.net/gzlaiyonghao/article/details/2325027" target="_blank" rel="noopener">http://blog.csdn.net/gzlaiyonghao/article/details/2325027</a></li>
+<li>图像相似度算法（二）比如： PSNR、IW-PSNR 可以参考如下：<ul>
+<li>各种算法定义（英文） <a href="https://ece.uwaterloo.ca/~z70wang/research/iwssim/" target="_blank" rel="noopener">https://ece.uwaterloo.ca/~z70wang/research/iwssim/</a></li>
+<li>各种算法定义 (中文) <a href="http://www.cnblogs.com/vincent2012/archive/2012/10/13/2723152.html" target="_blank" rel="noopener">http://www.cnblogs.com/vincent2012/archive/2012/10/13/2723152.html</a><br><a href="http://blog.csdn.net/ecnu18918079120/article/details/60149864" target="_blank" rel="noopener">http://blog.csdn.net/ecnu18918079120/article/details/60149864</a></li>
+<li>msssim 实现 <a href="https://github.com/tensorflow/models/blob/master/research/compression/image_encoder/msssim.py" target="_blank" rel="noopener">https://github.com/tensorflow/models/blob/master/research/compression/image_encoder/msssim.py</a><br>如果是python3运行，请添加tf.gfile.FastGFile打开文件方式，如：tf.gfile.FastGFile(FLAGS.original_image, ‘rb’)</li>
+</ul>
+</li>
+</ol>
+<p>tensorflow msssim 是目前相似度识别比较高的 脚本如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line">#</span><br><span class="line"># Copyright 2016 The TensorFlow Authors. All Rights Reserved.</span><br><span class="line">#</span><br><span class="line"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span><br><span class="line"># you may not use this file except in compliance with the License.</span><br><span class="line"># You may obtain a copy of the License at</span><br><span class="line">#</span><br><span class="line">#     http://www.apache.org/licenses/LICENSE-2.0</span><br><span class="line">#</span><br><span class="line"># Unless required by applicable law or agreed to in writing, software</span><br><span class="line"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span><br><span class="line"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span><br><span class="line"># See the License for the specific language governing permissions and</span><br><span class="line"># limitations under the License.</span><br><span class="line"># ==============================================================================</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;Python implementation of MS-SSIM.</span><br><span class="line">Usage:</span><br><span class="line">python msssim.py --original_image=original.png --compared_image=distorted.png</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">import numpy as np</span><br><span class="line">from scipy import signal</span><br><span class="line">from scipy.ndimage.filters import convolve</span><br><span class="line">import tensorflow as tf</span><br><span class="line"></span><br><span class="line">tf.flags.DEFINE_string(&apos;original_image&apos;, None, &apos;Path to PNG image.&apos;)</span><br><span class="line">tf.flags.DEFINE_string(&apos;compared_image&apos;, None, &apos;Path to PNG image.&apos;)</span><br><span class="line">FLAGS = tf.flags.FLAGS</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def _FSpecialGauss(size, sigma):</span><br><span class="line">    &quot;&quot;&quot;Function to mimic the &apos;fspecial&apos; gaussian MATLAB function.&quot;&quot;&quot;</span><br><span class="line">    radius = size // 2</span><br><span class="line">    offset = 0.0</span><br><span class="line">    start, stop = -radius, radius + 1</span><br><span class="line">    if size % 2 == 0:</span><br><span class="line">        offset = 0.5</span><br><span class="line">        stop -= 1</span><br><span class="line">    x, y = np.mgrid[offset + start:stop, offset + start:stop]</span><br><span class="line">    assert len(x) == size</span><br><span class="line">    g = np.exp(-((x ** 2 + y ** 2) / (2.0 * sigma ** 2)))</span><br><span class="line">    return g / g.sum()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def _SSIMForMultiScale(img1, img2, max_val=255, filter_size=11,</span><br><span class="line">                       filter_sigma=1.5, k1=0.01, k2=0.03):</span><br><span class="line">    &quot;&quot;&quot;Return the Structural Similarity Map between `img1` and `img2`.</span><br><span class="line">    This function attempts to match the functionality of ssim_index_new.m by</span><br><span class="line">    Zhou Wang: http://www.cns.nyu.edu/~lcv/ssim/msssim.zip</span><br><span class="line">    Arguments:</span><br><span class="line">      img1: Numpy array holding the first RGB image batch.</span><br><span class="line">      img2: Numpy array holding the second RGB image batch.</span><br><span class="line">      max_val: the dynamic range of the images (i.e., the difference between the</span><br><span class="line">        maximum the and minimum allowed values).</span><br><span class="line">      filter_size: Size of blur kernel to use (will be reduced for small images).</span><br><span class="line">      filter_sigma: Standard deviation for Gaussian blur kernel (will be reduced</span><br><span class="line">        for small images).</span><br><span class="line">      k1: Constant used to maintain stability in the SSIM calculation (0.01 in</span><br><span class="line">        the original paper).</span><br><span class="line">      k2: Constant used to maintain stability in the SSIM calculation (0.03 in</span><br><span class="line">        the original paper).</span><br><span class="line">    Returns:</span><br><span class="line">      Pair containing the mean SSIM and contrast sensitivity between `img1` and</span><br><span class="line">      `img2`.</span><br><span class="line">    Raises:</span><br><span class="line">      RuntimeError: If input images don&apos;t have the same shape or don&apos;t have four</span><br><span class="line">        dimensions: [batch_size, height, width, depth].</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    if img1.shape != img2.shape:</span><br><span class="line">        raise RuntimeError(&apos;Input images must have the same shape (%s vs. %s).&apos;,</span><br><span class="line">                           img1.shape, img2.shape)</span><br><span class="line">    if img1.ndim != 4:</span><br><span class="line">        raise RuntimeError(&apos;Input images must have four dimensions, not %d&apos;,</span><br><span class="line">                           img1.ndim)</span><br><span class="line"></span><br><span class="line">    img1 = img1.astype(np.float64)</span><br><span class="line">    img2 = img2.astype(np.float64)</span><br><span class="line">    _, height, width, _ = img1.shape</span><br><span class="line"></span><br><span class="line">    # Filter size can&apos;t be larger than height or width of images.</span><br><span class="line">    size = min(filter_size, height, width)</span><br><span class="line"></span><br><span class="line">    # Scale down sigma if a smaller filter size is used.</span><br><span class="line">    sigma = size * filter_sigma / filter_size if filter_size else 0</span><br><span class="line"></span><br><span class="line">    if filter_size:</span><br><span class="line">        window = np.reshape(_FSpecialGauss(size, sigma), (1, size, size, 1))</span><br><span class="line">        mu1 = signal.fftconvolve(img1, window, mode=&apos;valid&apos;)</span><br><span class="line">        mu2 = signal.fftconvolve(img2, window, mode=&apos;valid&apos;)</span><br><span class="line">        sigma11 = signal.fftconvolve(img1 * img1, window, mode=&apos;valid&apos;)</span><br><span class="line">        sigma22 = signal.fftconvolve(img2 * img2, window, mode=&apos;valid&apos;)</span><br><span class="line">        sigma12 = signal.fftconvolve(img1 * img2, window, mode=&apos;valid&apos;)</span><br><span class="line">    else:</span><br><span class="line">        # Empty blur kernel so no need to convolve.</span><br><span class="line">        mu1, mu2 = img1, img2</span><br><span class="line">        sigma11 = img1 * img1</span><br><span class="line">        sigma22 = img2 * img2</span><br><span class="line">        sigma12 = img1 * img2</span><br><span class="line"></span><br><span class="line">    mu11 = mu1 * mu1</span><br><span class="line">    mu22 = mu2 * mu2</span><br><span class="line">    mu12 = mu1 * mu2</span><br><span class="line">    sigma11 -= mu11</span><br><span class="line">    sigma22 -= mu22</span><br><span class="line">    sigma12 -= mu12</span><br><span class="line"></span><br><span class="line">    # Calculate intermediate values used by both ssim and cs_map.</span><br><span class="line">    c1 = (k1 * max_val) ** 2</span><br><span class="line">    c2 = (k2 * max_val) ** 2</span><br><span class="line">    v1 = 2.0 * sigma12 + c2</span><br><span class="line">    v2 = sigma11 + sigma22 + c2</span><br><span class="line">    ssim = np.mean((((2.0 * mu12 + c1) * v1) / ((mu11 + mu22 + c1) * v2)))</span><br><span class="line">    cs = np.mean(v1 / v2)</span><br><span class="line">    return ssim, cs</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def MultiScaleSSIM(img1, img2, max_val=255, filter_size=11, filter_sigma=1.5,</span><br><span class="line">                   k1=0.01, k2=0.03, weights=None):</span><br><span class="line">    &quot;&quot;&quot;Return the MS-SSIM score between `img1` and `img2`.</span><br><span class="line">    This function implements Multi-Scale Structural Similarity (MS-SSIM) Image</span><br><span class="line">    Quality Assessment according to Zhou Wang&apos;s paper, &quot;Multi-scale structural</span><br><span class="line">    similarity for image quality assessment&quot; (2003).</span><br><span class="line">    Link: https://ece.uwaterloo.ca/~z70wang/publications/msssim.pdf</span><br><span class="line">    Author&apos;s MATLAB implementation:</span><br><span class="line">    http://www.cns.nyu.edu/~lcv/ssim/msssim.zip</span><br><span class="line">    Arguments:</span><br><span class="line">      img1: Numpy array holding the first RGB image batch.</span><br><span class="line">      img2: Numpy array holding the second RGB image batch.</span><br><span class="line">      max_val: the dynamic range of the images (i.e., the difference between the</span><br><span class="line">        maximum the and minimum allowed values).</span><br><span class="line">      filter_size: Size of blur kernel to use (will be reduced for small images).</span><br><span class="line">      filter_sigma: Standard deviation for Gaussian blur kernel (will be reduced</span><br><span class="line">        for small images).</span><br><span class="line">      k1: Constant used to maintain stability in the SSIM calculation (0.01 in</span><br><span class="line">        the original paper).</span><br><span class="line">      k2: Constant used to maintain stability in the SSIM calculation (0.03 in</span><br><span class="line">        the original paper).</span><br><span class="line">      weights: List of weights for each level; if none, use five levels and the</span><br><span class="line">        weights from the original paper.</span><br><span class="line">    Returns:</span><br><span class="line">      MS-SSIM score between `img1` and `img2`.</span><br><span class="line">    Raises:</span><br><span class="line">      RuntimeError: If input images don&apos;t have the same shape or don&apos;t have four</span><br><span class="line">        dimensions: [batch_size, height, width, depth].</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    if img1.shape != img2.shape:</span><br><span class="line">        raise RuntimeError(&apos;Input images must have the same shape (%s vs. %s).&apos;,</span><br><span class="line">                           img1.shape, img2.shape)</span><br><span class="line">    if img1.ndim != 4:</span><br><span class="line">        raise RuntimeError(&apos;Input images must have four dimensions, not %d&apos;,</span><br><span class="line">                           img1.ndim)</span><br><span class="line"></span><br><span class="line">    # Note: default weights don&apos;t sum to 1.0 but do match the paper / matlab code.</span><br><span class="line">    weights = np.array(weights if weights else</span><br><span class="line">                       [0.0448, 0.2856, 0.3001, 0.2363, 0.1333])</span><br><span class="line">    levels = weights.size</span><br><span class="line">    downsample_filter = np.ones((1, 2, 2, 1)) / 4.0</span><br><span class="line">    im1, im2 = [x.astype(np.float64) for x in [img1, img2]]</span><br><span class="line">    mssim = np.array([])</span><br><span class="line">    mcs = np.array([])</span><br><span class="line">    for _ in range(levels):</span><br><span class="line">        ssim, cs = _SSIMForMultiScale(</span><br><span class="line">            im1, im2, max_val=max_val, filter_size=filter_size,</span><br><span class="line">            filter_sigma=filter_sigma, k1=k1, k2=k2)</span><br><span class="line">        mssim = np.append(mssim, ssim)</span><br><span class="line">        mcs = np.append(mcs, cs)</span><br><span class="line">        filtered = [convolve(im, downsample_filter, mode=&apos;reflect&apos;)</span><br><span class="line">                    for im in [im1, im2]]</span><br><span class="line">        im1, im2 = [x[:, ::2, ::2, :] for x in filtered]</span><br><span class="line">    return (np.prod(mcs[0:levels - 1] ** weights[0:levels - 1]) *</span><br><span class="line">            (mssim[levels - 1] ** weights[levels - 1]))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main(_):</span><br><span class="line">    if FLAGS.original_image is None or FLAGS.compared_image is None:</span><br><span class="line">        print(&apos;\nUsage: python msssim.py --original_image=original.png &apos;</span><br><span class="line">              &apos;--compared_image=distorted.png\n\n&apos;)</span><br><span class="line">        return</span><br><span class="line"></span><br><span class="line">    if not tf.gfile.Exists(FLAGS.original_image):</span><br><span class="line">        print(&apos;\nCannot find --original_image.\n&apos;)</span><br><span class="line">        return</span><br><span class="line"></span><br><span class="line">    if not tf.gfile.Exists(FLAGS.compared_image):</span><br><span class="line">        print(&apos;\nCannot find --compared_image.\n&apos;)</span><br><span class="line">        return</span><br><span class="line"></span><br><span class="line">    with tf.gfile.FastGFile(FLAGS.original_image, &apos;rb&apos;) as image_file:</span><br><span class="line">        img1_str = image_file.read()</span><br><span class="line">    with tf.gfile.FastGFile(FLAGS.compared_image, &apos;rb&apos;) as image_file:</span><br><span class="line">        img2_str = image_file.read()</span><br><span class="line"></span><br><span class="line">    input_img = tf.placeholder(tf.string)</span><br><span class="line">    decoded_image = tf.expand_dims(tf.image.decode_png(input_img, channels=3), 0)</span><br><span class="line"></span><br><span class="line">    with tf.Session() as sess:</span><br><span class="line">        img1 = sess.run(decoded_image, feed_dict=&#123;input_img: img1_str&#125;)</span><br><span class="line">        img2 = sess.run(decoded_image, feed_dict=&#123;input_img: img2_str&#125;)</span><br><span class="line"></span><br><span class="line">    print((MultiScaleSSIM(img1, img2, max_val=255)))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    tf.app.run()</span><br></pre></td></tr></table></figure></p>
+<p>命令行运行：<br>python msssim.py –original_image=original.png –compared_image=distorted.png</p>
+<p>结构相似对比的基础需要shape相同，如果不同shape图像对比，可以将两张图像转换为同一个尺寸,python 操作库</p>
+<ol>
+<li>skimage(<a href="https://www.jianshu.com/p/f2e88197e81d" target="_blank" rel="noopener">https://www.jianshu.com/p/f2e88197e81d</a>) transform方法</li>
+<li>cv2(opencv-python) resize方法</li>
+</ol>
+<p>ssim 经典案例： <a href="https://www.pyimagesearch.com/2017/06/19/image-difference-with-opencv-and-python/" target="_blank" rel="noopener">https://www.pyimagesearch.com/2017/06/19/image-difference-with-opencv-and-python/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/11/tensorflow/similarity/" data-id="cjocl45gx002kf8strtbyjh4s" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tensorflow/">tensorflow</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-addchar" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/11/addchar/" class="article-date">
+  <time datetime="2018-11-11T07:55:32.865Z" itemprop="datePublished">2018-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/11/addchar/">解追加字符（python）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>==日常编码中常遇迭代字符拼接问题，特记录实现思路，供参考，如： [a,b,c,d,e,f] –&gt; a + b + c + d + e + f==</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
+<li>设定一个计数器，到最后一个数，就不在拼接字符</li>
+<li>依次拼接完，再单独去掉最后拼接的字符</li>
+</ol>
+<h2 id="实现如下"><a href="#实现如下" class="headerlink" title="实现如下"></a>实现如下</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">思路一：</span><br><span class="line"></span><br><span class="line">def generate_sql(*args):</span><br><span class="line">	sql = &apos;sql=&apos;</span><br><span class="line">    arg_count = len(args)</span><br><span class="line">    while True:</span><br><span class="line">        if arg_count == 1:</span><br><span class="line">            sql += args[arg_count - 1]</span><br><span class="line">            break</span><br><span class="line">        else:</span><br><span class="line">            sql += args[arg_count - 1] + &apos; AND &apos;</span><br><span class="line">        arg_count = arg_count - 1</span><br><span class="line">    return sql</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">思路二：</span><br><span class="line"></span><br><span class="line">def generate_sql(*args):</span><br><span class="line">	sql = &apos;sql=&apos;</span><br><span class="line">    for arg in args:</span><br><span class="line">    	sql += arg + &apos; AND &apos;</span><br><span class="line">   	return &apos;&apos;.join(sql.rsplit(&apos; AND &apos;, 1)[:-1])</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/11/addchar/" data-id="cjocl45e50000f8stzuve3qbd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/essay/">essay</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-checkreference" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/11/checkreference/" class="article-date">
+  <time datetime="2018-11-11T07:55:32.865Z" itemprop="datePublished">2018-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/11/checkreference/">判断一个数据类型传参是引用还是值类型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/11/checkreference/" data-id="cjocl45eb0001f8stpsmsqpqy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/essay/">essay</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-closure" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/11/closure/" class="article-date">
+  <time datetime="2018-11-11T07:55:32.865Z" itemprop="datePublished">2018-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/11/closure/">closure闭包</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>解释闭包：“内部函数”引用了外部“外部函数”的变量并返回一个函数变量就是一个闭包，起源于内部函数，python一切皆对象</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/11/closure/" data-id="cjocl45ef0003f8stodtq2ngo" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-android/adb_error" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/11/android/adb_error/" class="article-date">
+  <time datetime="2018-11-11T07:55:32.865Z" itemprop="datePublished">2018-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/11/android/adb_error/">记录一次adb异常问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>android测试过程中,经常用到<a href="https://developer.android.com/studio/command-line/adb.html?hl=zh-cn#howadbworks" target="_blank" rel="noopener">adb</a>命令，在同时使用模拟器和真机调用时候，发现如下异常提示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* daemon not running. starting it now *   </span><br><span class="line">ADB server didn&apos;t ACK   </span><br><span class="line">* failed to start daemon *</span><br></pre></td></tr></table></figure>
+<p>网上搜索一番都在说模拟器的adb设置为sdk路径，但早就已经设置了，后来发现debian系统默认安装了adb命令(whereis adb查询)<br>于是，使用sdk里面的adb就可以正常查看模拟器和真机devices info.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/11/android/adb_error/" data-id="cjocl45ff000hf8stz2ab7nb9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">__('next') &raquo;</a>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/essay/">essay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/feel/">feel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macaca/">macaca</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/open-stf/">open-stf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/">opencv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tensorflow/">tensorflow</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/appium/" style="font-size: 12.5px;">appium</a> <a href="/tags/essay/" style="font-size: 17.5px;">essay</a> <a href="/tags/feel/" style="font-size: 10px;">feel</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/macaca/" style="font-size: 15px;">macaca</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/open-stf/" style="font-size: 17.5px;">open-stf</a> <a href="/tags/opencv/" style="font-size: 10px;">opencv</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/tensorflow/" style="font-size: 10px;">tensorflow</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/11/11/java8IntStream/">java8 handle multi foreach</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/java8filter/">java8 multi filters</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/python/python_cli/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/python/python_datetime/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/opencv/opencvinstall/">opencv安装(debian)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 chuanqiong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

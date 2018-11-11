@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Python 进程 线程 并发 并行 | Space Test Enginner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="相关名称解释  进程： 操作系统可以同时运行多个任务，对于操作系统来说，一个任务就是一个进程（Process），比如打开一个浏览器就是启动一个浏览器进程，打开一个记事本就启动了一个记事本进程，打开两个记事本就启动了两个记事本进程，打开一个Word就启动了一个Word进程举个栗子：你一边玩游戏一边听歌，我们的大脑就开始多个而“进程”，同时进行多个任务呢 线程： 有时候你发现word进程还不止同时干一">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python 进程 线程 并发 并行">
+<meta property="og:url" content="http://www.whatistest.com/2018/11/11/python/python_consurrent/index.html">
+<meta property="og:site_name" content="Space Test Enginner">
+<meta property="og:description" content="相关名称解释  进程： 操作系统可以同时运行多个任务，对于操作系统来说，一个任务就是一个进程（Process），比如打开一个浏览器就是启动一个浏览器进程，打开一个记事本就启动了一个记事本进程，打开两个记事本就启动了两个记事本进程，打开一个Word就启动了一个Word进程举个栗子：你一边玩游戏一边听歌，我们的大脑就开始多个而“进程”，同时进行多个任务呢 线程： 有时候你发现word进程还不止同时干一">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-674f0d37fca4fac1bd2df28a2b78e633_hd.jpg">
+<meta property="og:updated_time" content="2018-11-11T07:55:32.869Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python 进程 线程 并发 并行">
+<meta name="twitter:description" content="相关名称解释  进程： 操作系统可以同时运行多个任务，对于操作系统来说，一个任务就是一个进程（Process），比如打开一个浏览器就是启动一个浏览器进程，打开一个记事本就启动了一个记事本进程，打开两个记事本就启动了两个记事本进程，打开一个Word就启动了一个Word进程举个栗子：你一边玩游戏一边听歌，我们的大脑就开始多个而“进程”，同时进行多个任务呢 线程： 有时候你发现word进程还不止同时干一">
+<meta name="twitter:image" content="https://pic4.zhimg.com/80/v2-674f0d37fca4fac1bd2df28a2b78e633_hd.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Space Test Enginner" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Space Test Enginner</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">太空攻城狮</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.whatistest.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-python/python_consurrent" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/11/python/python_consurrent/" class="article-date">
+  <time datetime="2018-11-11T07:55:32.869Z" itemprop="datePublished">2018-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python 进程 线程 并发 并行
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>相关名称解释</p>
+<ol>
+<li>进程： 操作系统可以同时运行多个任务，对于操作系统来说，一个任务就是一个进程（Process），比如打开一个浏览器就是启动一个浏览器进程，打开一个记事本就启动了一个记事本进程，打开两个记事本就启动了两个记事本进程，打开一个Word就启动了一个Word进程<br>举个栗子：<br>你一边玩游戏一边听歌，我们的大脑就开始多个而“进程”，同时进行多个任务呢</li>
+<li>线程： 有时候你发现word进程还不止同时干一件事，比如它可以同时进行打字、拼写检查、打印等事情。在一个进程内部，要同时干多件事，就需要同时运行多个“子任务”，我们把进程内的这些“子任务”称为线程（Thread）<br>举个栗子：<br>我们在玩游戏的时候，手的动作算个任务（也就是线程），我们10个手指怎么协调，就可以看成多个线程</li>
+<li>并行、并发：引用一下Erlang 之父 Joe Armstrong的解释，你的年龄大于5岁，相信你看懂了<br><img src="https://pic4.zhimg.com/80/v2-674f0d37fca4fac1bd2df28a2b78e633_hd.jpg" alt=""></li>
+</ol>
+<ul>
+<li>并发是两个队列交替使用一台咖啡机</li>
+<li>并行是两个队列同时使用两台咖啡机<br>理解并发或并行的关键在于CPU的使用情况，如果多个线程共用一个CPU交替执行任务就是并发，如果多个线程多个CPU交替执行就是并行，不难看出并行是并发的一个子集。<br><a href="https://www.zhihu.com/question/33515481" target="_blank" rel="noopener">名称解释参考</a></li>
+</ul>
+<ol start="4">
+<li>GIL: GIL全称Global Interpreter Lock, GIL并不是Python的特性，它是在实现Python解析器(CPython)时所引入的一个概念。就好比C++是一套语言（语法）标准，但是可以用不同的编译器来编译成可执行代码。有名的编译器例如GCC，INTEL C++，Visual C++等。Python也一样，同样一段代码可以通过CPython，PyPy，Psyco等不同的Python执行环境来执行。像其中的JPython就没有GIL。然而因为CPython是大部分环境下默认的Python执行环境。所以在很多人的概念里CPython就是Python，也就想当然的把GIL归结为Python语言的缺陷。所以这里要先明确一点：GIL并不是Python的特性，Python完全可以不依赖于GIL</li>
+</ol>
+<p>理解概念后，可以参考如下大佬们的分享，健步如飞。<br><a href="https://zhuanlan.zhihu.com/p/25377631" target="_blank" rel="noopener">理解python并发编程一篇就够了</a><br><a href="https://zhuanlan.zhihu.com/p/25228075" target="_blank" rel="noopener">从0到1，Python异步编程的演进之路</a><br><a href="https://zhuanlan.zhihu.com/p/31544936" target="_blank" rel="noopener">Python concurrent.future 使用教程及源码初剖</a><br><a href="https://zhuanlan.zhihu.com/p/24960492" target="_blank" rel="noopener">Python多进程并行编程实践-multiprocessing模块</a><br><a href="https://zhuanlan.zhihu.com/p/21465564" target="_blank" rel="noopener">Python并发学习笔记：从协程到GEVENT（一）</a><br>怎么使用已经有很多文档了，不论是好方案，如果不是和你的场景，就不能发挥它的最大价值</p>
+<ul>
+<li>使用场景是CPU密集型</li>
+<li>使用场景是IO密集型</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/11/python/python_consurrent/" data-id="cjocl45ge001ef8sti91ephaj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/11/11/openstf/stfnote1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          openstf二次开发之分析源码第一篇(登录组件)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/11/11/python/python_generater/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/essay/">essay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/feel/">feel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macaca/">macaca</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/open-stf/">open-stf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/">opencv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tensorflow/">tensorflow</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/appium/" style="font-size: 12.5px;">appium</a> <a href="/tags/essay/" style="font-size: 17.5px;">essay</a> <a href="/tags/feel/" style="font-size: 10px;">feel</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/macaca/" style="font-size: 15px;">macaca</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/open-stf/" style="font-size: 17.5px;">open-stf</a> <a href="/tags/opencv/" style="font-size: 10px;">opencv</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/tensorflow/" style="font-size: 10px;">tensorflow</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/11/11/java8IntStream/">java8 handle multi foreach</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/java8filter/">java8 multi filters</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/python/python_cli/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/python/python_datetime/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/opencv/opencvinstall/">opencv安装(debian)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 chuanqiong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>openstf二次开发之分析源码第一篇(登录组件) | Space Test Enginner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言前面我们已经了解了openstf的安装、编译，现在我们就开始分析源码，openstf提供了两种登录方式如下：  ldap mock  看openstf开发文档说明还提供了OAuth2.0，似乎只对Docker deployment.下面以mock为例，简单说明一下。 首先介绍下openstf整体目录结构├── bin ———————————————- 启动目录├── bower.json ——">
+<meta name="keywords" content="open-stf">
+<meta property="og:type" content="article">
+<meta property="og:title" content="openstf二次开发之分析源码第一篇(登录组件)">
+<meta property="og:url" content="http://www.whatistest.com/2018/11/11/openstf/stfnote1/index.html">
+<meta property="og:site_name" content="Space Test Enginner">
+<meta property="og:description" content="前言前面我们已经了解了openstf的安装、编译，现在我们就开始分析源码，openstf提供了两种登录方式如下：  ldap mock  看openstf开发文档说明还提供了OAuth2.0，似乎只对Docker deployment.下面以mock为例，简单说明一下。 首先介绍下openstf整体目录结构├── bin ———————————————- 启动目录├── bower.json ——">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-11T07:55:32.869Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="openstf二次开发之分析源码第一篇(登录组件)">
+<meta name="twitter:description" content="前言前面我们已经了解了openstf的安装、编译，现在我们就开始分析源码，openstf提供了两种登录方式如下：  ldap mock  看openstf开发文档说明还提供了OAuth2.0，似乎只对Docker deployment.下面以mock为例，简单说明一下。 首先介绍下openstf整体目录结构├── bin ———————————————- 启动目录├── bower.json ——">
+  
+    <link rel="alternate" href="/atom.xml" title="Space Test Enginner" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Space Test Enginner</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">太空攻城狮</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.whatistest.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-openstf/stfnote1" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/11/openstf/stfnote1/" class="article-date">
+  <time datetime="2018-11-11T07:55:32.869Z" itemprop="datePublished">2018-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      openstf二次开发之分析源码第一篇(登录组件)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前面我们已经了解了openstf的安装、编译，现在我们就开始分析源码，openstf提供了两种登录方式如下：</p>
+<ol>
+<li>ldap</li>
+<li>mock</li>
+</ol>
+<p>看<a href="https://github.com/openstf/stf/blob/master/doc/DEPLOYMENT.md#stf-authservice" target="_blank" rel="noopener">openstf开发文档</a>说明还提供了OAuth2.0，似乎只对Docker deployment.下面以mock为例，简单说明一下。</p>
+<h2 id="首先介绍下openstf整体目录结构"><a href="#首先介绍下openstf整体目录结构" class="headerlink" title="首先介绍下openstf整体目录结构"></a>首先介绍下openstf整体目录结构</h2><p>├── bin ———————————————- 启动目录<br>├── bower.json ————————————–bower包管理配置文件<br>├── CHANGELOG.md——————————–变更说明<br>├── CONTRIBUTING.md<br>├── doc————————————————文档说明<br>├── docker——————————————–Docker镜像<br>├── Dockerfile—————————————-Docker配置文件<br>├── DONATION-TRANSPARENCY.md<br>├── gulpfile.js—————————————-gulp自动构建文件<br>├── ISSUE_TEMPLATE.md<br>├── lib ————————————————后端项目<br>├── LICENSE<br>├── node_modules<br>├── package.json<br>├── README.md<br>├── res————————————————前端项目<br>├── test ———————————————-检测项目<br>├── TESTING.md<br>├── tmp<br>├── vendor——————————————–安装目录<br>├── webpack.config.js<br>└── yarn.lock<br>note: 目录成树桩显示，用的是tree -L 1 命令</p>
+<p>open-stf用的是模块化开发，通过webpack.config.js可以知道app, authldap, authmock三个入口，即模块</p>
+<h2 id="mock登录"><a href="#mock登录" class="headerlink" title="mock登录"></a>mock登录</h2><h3 id="1-mock前端部分"><a href="#1-mock前端部分" class="headerlink" title="1. mock前端部分"></a>1. mock前端部分</h3><p>路径：/stf/res/auth/mock<br>├── scripts<br>│   ├── entry.js<br>│   └── signin<br>│       ├── index.js<br>│       ├── signin-controller.js<br>│       ├── signin.css<br>│       └── signin.pug<br>└── views<br>    └── index.pug</p>
+<ul>
+<li><p>首先需要了解的是entry.js(webpack)入口配置点，<a href="http://www.css88.com/doc/webpack2/guides/code-splitting-require" target="_blank" rel="noopener">webpack详细配置说明</a><br>包含两个部分，<br>一是依赖的模块<br>require(‘nine-bootstrap’)<br>require(‘angular’)<br>require(‘angular-route’)<br>require(‘angular-touch’)<br>require(‘./signin’).name &gt;&gt; 首页模块<br>二是angular模块的初始化和route配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$locationProvider.html5Mode -开启html5</span><br><span class="line">$routeProvider</span><br><span class="line">      .otherwise(&#123;</span><br><span class="line">        redirectTo: &apos;/auth/mock/&apos;</span><br><span class="line">      &#125;)</span><br><span class="line">      配置跳转路由</span><br></pre></td></tr></table></figure>
+<p>通过entry.js的配置，我们知道页面将跳转到’/auth/mock’</p>
+</li>
+<li></li>
+</ul>
+<h3 id="2-mock后端部分"><a href="#2-mock后端部分" class="headerlink" title="2. mock后端部分"></a>2. mock后端部分</h3><p>路径：/stf/lib/units/auth<br>├── ldap.js<br>├── mock.js<br>├── oauth2<br>│   ├── index.js<br>│   └── strategy.js<br>├── openid.js<br>└── saml2.js<br>mock.js为mock部分后端源码</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/11/openstf/stfnote1/" data-id="cjocl45gd001cf8std86pxkw5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/open-stf/">open-stf</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/11/11/openstf/stfinstall/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          open-stf 安装篇（linux）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/11/11/python/python_consurrent/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Python 进程 线程 并发 并行</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/essay/">essay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/feel/">feel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macaca/">macaca</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/open-stf/">open-stf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/">opencv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tensorflow/">tensorflow</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/appium/" style="font-size: 12.5px;">appium</a> <a href="/tags/essay/" style="font-size: 17.5px;">essay</a> <a href="/tags/feel/" style="font-size: 10px;">feel</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/macaca/" style="font-size: 15px;">macaca</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/open-stf/" style="font-size: 17.5px;">open-stf</a> <a href="/tags/opencv/" style="font-size: 10px;">opencv</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/tensorflow/" style="font-size: 10px;">tensorflow</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/11/11/java8IntStream/">java8 handle multi foreach</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/java8filter/">java8 multi filters</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/python/python_cli/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/python/python_datetime/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/opencv/opencvinstall/">opencv安装(debian)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 chuanqiong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

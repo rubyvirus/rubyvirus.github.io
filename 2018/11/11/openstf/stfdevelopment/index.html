@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>openstf免登录 | Space Test Enginner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="openstf已经很流行了现在有个需求，需要把openstf介入到现有系统中，直接跳转到设备管理页面， 话不多说，直接上代码 以下为stf源码中mock登录12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455app.post(&amp;apos;/auth/">
+<meta name="keywords" content="open-stf">
+<meta property="og:type" content="article">
+<meta property="og:title" content="openstf免登录">
+<meta property="og:url" content="http://www.whatistest.com/2018/11/11/openstf/stfdevelopment/index.html">
+<meta property="og:site_name" content="Space Test Enginner">
+<meta property="og:description" content="openstf已经很流行了现在有个需求，需要把openstf介入到现有系统中，直接跳转到设备管理页面， 话不多说，直接上代码 以下为stf源码中mock登录12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455app.post(&amp;apos;/auth/">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-11T07:55:32.869Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="openstf免登录">
+<meta name="twitter:description" content="openstf已经很流行了现在有个需求，需要把openstf介入到现有系统中，直接跳转到设备管理页面， 话不多说，直接上代码 以下为stf源码中mock登录12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455app.post(&amp;apos;/auth/">
+  
+    <link rel="alternate" href="/atom.xml" title="Space Test Enginner" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Space Test Enginner</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">太空攻城狮</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.whatistest.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-openstf/stfdevelopment" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/11/openstf/stfdevelopment/" class="article-date">
+  <time datetime="2018-11-11T07:55:32.869Z" itemprop="datePublished">2018-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      openstf免登录
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>openstf已经很流行了现在有个需求，需要把openstf介入到现有系统中，直接跳转到设备管理页面， 话不多说，直接上代码</p>
+<h3 id="以下为stf源码中mock登录"><a href="#以下为stf源码中mock登录" class="headerlink" title="以下为stf源码中mock登录"></a>以下为stf源码中mock登录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">app.post(&apos;/auth/api/v1/mock&apos;, function(req, res) &#123;</span><br><span class="line">    var log = logger.createLogger(&apos;auth-mock&apos;)</span><br><span class="line">    log.setLocalIdentifier(req.ip)</span><br><span class="line">    switch (req.accepts([&apos;json&apos;])) &#123;</span><br><span class="line">      case &apos;json&apos;:</span><br><span class="line">        requtil.validate(req, function() &#123;</span><br><span class="line">            req.checkBody(&apos;name&apos;).notEmpty()</span><br><span class="line">            req.checkBody(&apos;email&apos;).isEmail()</span><br><span class="line">          &#125;)</span><br><span class="line">          .then(function() &#123;</span><br><span class="line">            log.info(&apos;Authenticated &quot;%s&quot;&apos;, req.body.email)</span><br><span class="line">            var token = jwtutil.encode(&#123;</span><br><span class="line">              payload: &#123;</span><br><span class="line">                email: req.body.email</span><br><span class="line">              , name: req.body.name</span><br><span class="line">              &#125;</span><br><span class="line">            , secret: options.secret</span><br><span class="line">            , header: &#123;</span><br><span class="line">                exp: Date.now() + 24 * 3600</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;)</span><br><span class="line"></span><br><span class="line">            log.info(&apos;stf login token: &apos;, urlutil.addParams(options.appUrl, &#123;</span><br><span class="line">              jwt: token</span><br><span class="line">            &#125;))</span><br><span class="line">            res.status(200)</span><br><span class="line">              .json(&#123;</span><br><span class="line">                success: true</span><br><span class="line">              , redirect: urlutil.addParams(options.appUrl, &#123;</span><br><span class="line">                  jwt: token</span><br><span class="line">                &#125;)</span><br><span class="line">              &#125;)</span><br><span class="line">          &#125;)</span><br><span class="line">          .catch(requtil.ValidationError, function(err) &#123;</span><br><span class="line">            res.status(400)</span><br><span class="line">              .json(&#123;</span><br><span class="line">                success: false</span><br><span class="line">              , error: &apos;ValidationError&apos;</span><br><span class="line">              , validationErrors: err.errors</span><br><span class="line">              &#125;)</span><br><span class="line">          &#125;)</span><br><span class="line">          .catch(function(err) &#123;</span><br><span class="line">            log.error(&apos;Unexpected error&apos;, err.stack)</span><br><span class="line">            res.status(500)</span><br><span class="line">              .json(&#123;</span><br><span class="line">                success: false</span><br><span class="line">              , error: &apos;ServerError&apos;</span><br><span class="line">              &#125;)</span><br><span class="line">          &#125;)</span><br><span class="line">        break</span><br><span class="line">      default:</span><br><span class="line">        res.send(406)</span><br><span class="line">        break</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<ol>
+<li>重点看一下 redirect: urlutil.addParams(options.appUrl, {jwt: token})这段代码，意思是生成的token为jwt入参，跳转到设备管理页面，大家可以以日志的形式，将urlutil.addParams(options.appUrl, {jwt: token})打印出来，复制到浏览器直接访问，即可进到设备管理页面</li>
+<li>有了上面的知识点，于是继续看下面的代码<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">app.get(&apos;/auth/api/v1/url&apos;, function(req, res) &#123;</span><br><span class="line">    var log = logger.createLogger(&apos;auth-api-url&apos;)</span><br><span class="line">    log.setLocalIdentifier(req.ip)</span><br><span class="line">    var userName = req.query.username</span><br><span class="line">    log.info(&apos;传入的username: &apos; + userName)</span><br><span class="line">    if(userName) &#123;</span><br><span class="line">      var token = jwtutil.encode(&#123;</span><br><span class="line">        payload: &#123;</span><br><span class="line">          email: userName + &apos;@zbj.com&apos;</span><br><span class="line">          , name: userName</span><br><span class="line">        &#125;</span><br><span class="line">        , secret: options.secret</span><br><span class="line">        , header: &#123;</span><br><span class="line">          exp: Date.now() + 24 * 3600</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">      log.info(&apos;生成的token &apos; + token)</span><br><span class="line">      var respStr = urlutil.addParams(options.appUrl, &#123;</span><br><span class="line">        jwt: token</span><br><span class="line">      &#125;)</span><br><span class="line">      log.warn(&apos;返回的登录地址 &apos; + respStr)</span><br><span class="line">      // 渲染列表页面，支持跨域</span><br><span class="line">      res.header(&apos;Access-Control-Allow-Origin&apos;, &apos;*&apos;)</span><br><span class="line">      res.jsonp(&#123;url: respStr&#125;)</span><br><span class="line">    &#125;</span><br><span class="line">   else &#123;</span><br><span class="line">    res.status(400)</span><br><span class="line">      .json(&#123;</span><br><span class="line">        success: false</span><br><span class="line">        , error: &apos;ValidationError&apos;</span><br><span class="line">        , validationErrors: err.errors</span><br><span class="line">      &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>只需要输入一个username就可以登录系统，如果用户不存在，openstf会自动添加一条用户记录，usermail这里是直接拼接的，也可以直接转入usermail,username</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/11/openstf/stfdevelopment/" data-id="cjocl45g80016f8stqimydaqm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/open-stf/">open-stf</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/11/11/openstf/stfbuild/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          open-stf 源码编译运行
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/11/11/openstf/stfinstall/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">open-stf 安装篇（linux）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/essay/">essay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/feel/">feel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macaca/">macaca</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/open-stf/">open-stf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/">opencv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tensorflow/">tensorflow</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/appium/" style="font-size: 12.5px;">appium</a> <a href="/tags/essay/" style="font-size: 17.5px;">essay</a> <a href="/tags/feel/" style="font-size: 10px;">feel</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/macaca/" style="font-size: 15px;">macaca</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/open-stf/" style="font-size: 17.5px;">open-stf</a> <a href="/tags/opencv/" style="font-size: 10px;">opencv</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/tensorflow/" style="font-size: 10px;">tensorflow</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/11/11/java8IntStream/">java8 handle multi foreach</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/java8filter/">java8 multi filters</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/python/python_cli/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/python/python_datetime/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/opencv/opencvinstall/">opencv安装(debian)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 chuanqiong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

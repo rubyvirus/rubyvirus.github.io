@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>open-stf 源码编译运行 | Space Test Enginner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="下载open-stf源码https://github.com/openstf/stf 安装open-stf到本地 sudo npm install （可选） cnpm install (推荐使用淘宝镜像) 实操发现，此步骤会自动编译，无需执行下面命令安装package.jsoncnpm install package.json编译(angular 开发，用的是gulp构建工具)gulp clean">
+<meta name="keywords" content="open-stf">
+<meta property="og:type" content="article">
+<meta property="og:title" content="open-stf 源码编译运行">
+<meta property="og:url" content="http://www.whatistest.com/2018/11/11/openstf/stfbuild/index.html">
+<meta property="og:site_name" content="Space Test Enginner">
+<meta property="og:description" content="下载open-stf源码https://github.com/openstf/stf 安装open-stf到本地 sudo npm install （可选） cnpm install (推荐使用淘宝镜像) 实操发现，此步骤会自动编译，无需执行下面命令安装package.jsoncnpm install package.json编译(angular 开发，用的是gulp构建工具)gulp clean">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-11T07:55:32.869Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="open-stf 源码编译运行">
+<meta name="twitter:description" content="下载open-stf源码https://github.com/openstf/stf 安装open-stf到本地 sudo npm install （可选） cnpm install (推荐使用淘宝镜像) 实操发现，此步骤会自动编译，无需执行下面命令安装package.jsoncnpm install package.json编译(angular 开发，用的是gulp构建工具)gulp clean">
+  
+    <link rel="alternate" href="/atom.xml" title="Space Test Enginner" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Space Test Enginner</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">太空攻城狮</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.whatistest.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-openstf/stfbuild" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/11/openstf/stfbuild/" class="article-date">
+  <time datetime="2018-11-11T07:55:32.869Z" itemprop="datePublished">2018-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      open-stf 源码编译运行
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="下载open-stf源码"><a href="#下载open-stf源码" class="headerlink" title="下载open-stf源码"></a>下载open-stf源码</h1><p><a href="https://github.com/openstf/stf" target="_blank" rel="noopener">https://github.com/openstf/stf</a></p>
+<h1 id="安装open-stf到本地"><a href="#安装open-stf到本地" class="headerlink" title="安装open-stf到本地"></a>安装open-stf到本地</h1><ul>
+<li>sudo npm install （可选）</li>
+<li>cnpm install (推荐使用淘宝镜像) 实操发现，此步骤会自动编译，无需执行下面命令<h1 id="安装package-json"><a href="#安装package-json" class="headerlink" title="安装package.json"></a>安装package.json</h1>cnpm install package.json<h1 id="编译-angular-开发，用的是gulp构建工具"><a href="#编译-angular-开发，用的是gulp构建工具" class="headerlink" title="编译(angular 开发，用的是gulp构建工具)"></a>编译(angular 开发，用的是gulp构建工具)</h1>gulp clean &amp;&amp; gulp webpack:build</li>
+</ul>
+<p>安装过程中可能会提示某些module 没有安装，使用cnpm install module</p>
+<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><p>stf local</p>
+<p>问题：</p>
+<ul>
+<li>ERROR in Node Sass does not yet support your current environment: Linux 64-bit with Unsupported runtime (59)<br>查看npm package版本 cnpm ls node-sass 应该是大于3.8的，然后重新编译npm rebuild node-sass就不会抛出哦</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/11/openstf/stfbuild/" data-id="cjocl45g60014f8st675fgvqw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/open-stf/">open-stf</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/11/11/opencv/opencvinstall/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          opencv安装(debian)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/11/11/openstf/stfdevelopment/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">openstf免登录</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/essay/">essay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/feel/">feel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macaca/">macaca</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/open-stf/">open-stf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/">opencv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tensorflow/">tensorflow</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/appium/" style="font-size: 12.5px;">appium</a> <a href="/tags/essay/" style="font-size: 17.5px;">essay</a> <a href="/tags/feel/" style="font-size: 10px;">feel</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/macaca/" style="font-size: 15px;">macaca</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/open-stf/" style="font-size: 17.5px;">open-stf</a> <a href="/tags/opencv/" style="font-size: 10px;">opencv</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/tensorflow/" style="font-size: 10px;">tensorflow</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/11/11/java8IntStream/">java8 handle multi foreach</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/java8filter/">java8 multi filters</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/python/python_cli/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/python/python_datetime/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/opencv/opencvinstall/">opencv安装(debian)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 chuanqiong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Space Test Enginner</title>
+  
+  <subtitle>太空攻城狮</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.whatistest.com/"/>
+  <updated>2018-11-11T07:55:32.869Z</updated>
+  <id>http://www.whatistest.com/</id>
+  
+  <author>
+    <name>chuanqiong</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java8 handle multi foreach</title>
+    <link href="http://www.whatistest.com/2018/11/11/java8IntStream/"/>
+    <id>http://www.whatistest.com/2018/11/11/java8IntStream/</id>
+    <published>2018-11-11T07:55:32.869Z</published>
+    <updated>2018-11-11T07:55:32.869Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="java8-处理多个循环遍历"><a href="#java8-处理多个循环遍历" class="headerlink" title="java8 处理多个循环遍历"></a>java8 处理多个循环遍历</h2><p>如：<br>for(){<br>    for(){<br>    }<br>}<br>整合为：<br>IntStream.range(min,max).forEach(….)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;java8-处理多个循环遍历&quot;&gt;&lt;a href=&quot;#java8-处理多个循环遍历&quot; class=&quot;headerlink&quot; title=&quot;java8 处理多个循环遍历&quot;&gt;&lt;/a&gt;java8 处理多个循环遍历&lt;/h2&gt;&lt;p&gt;如：&lt;br&gt;for(){&lt;br&gt;    fo
+      
+    
+    </summary>
+    
+    
+      <category term="essay" scheme="http://www.whatistest.com/tags/essay/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java8 multi filters</title>
+    <link href="http://www.whatistest.com/2018/11/11/java8filter/"/>
+    <id>http://www.whatistest.com/2018/11/11/java8filter/</id>
+    <published>2018-11-11T07:55:32.869Z</published>
+    <updated>2018-11-11T07:55:32.869Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="java8流式使用逻辑运算符实现多个条件筛选"><a href="#java8流式使用逻辑运算符实现多个条件筛选" class="headerlink" title="java8流式使用逻辑运算符实现多个条件筛选"></a>java8流式使用逻辑运算符实现多个条件筛选</h4><p>如：<br>stream().filter(str-&gt;str&gt;0).filter(str-&gt;str.endWiths(“”))<br>整合为：<br>stream.filter(str-&gt;str&gt;0||str.endWiths(“”))</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;java8流式使用逻辑运算符实现多个条件筛选&quot;&gt;&lt;a href=&quot;#java8流式使用逻辑运算符实现多个条件筛选&quot; class=&quot;headerlink&quot; title=&quot;java8流式使用逻辑运算符实现多个条件筛选&quot;&gt;&lt;/a&gt;java8流式使用逻辑运算符实现多个条件
+      
+    
+    </summary>
+    
+    
+      <category term="essay" scheme="http://www.whatistest.com/tags/essay/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.whatistest.com/2018/11/11/python/python_cli/"/>
+    <id>http://www.whatistest.com/2018/11/11/python/python_cli/</id>
+    <published>2018-11-11T07:55:32.869Z</published>
+    <updated>2018-11-11T07:55:32.869Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.whatistest.com/2018/11/11/python/python_datetime/"/>
+    <id>http://www.whatistest.com/2018/11/11/python/python_datetime/</id>
+    <published>2018-11-11T07:55:32.869Z</published>
+    <updated>2018-11-11T07:55:32.869Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>opencv安装(debian)</title>
+    <link href="http://www.whatistest.com/2018/11/11/opencv/opencvinstall/"/>
+    <id>http://www.whatistest.com/2018/11/11/opencv/opencvinstall/</id>
+    <published>2018-11-11T07:55:32.869Z</published>
+    <updated>2018-11-11T07:55:32.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>opencv流行已久，下面来讲一波debian上安装说明</p><h2 id="从debian仓库安装依赖"><a href="#从debian仓库安装依赖" class="headerlink" title="从debian仓库安装依赖"></a>从debian仓库安装依赖</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libopencv-dev python-opencv</span><br></pre></td></tr></table></figure><h2 id="通过以下脚本批量操作"><a href="#通过以下脚本批量操作" class="headerlink" title="通过以下脚本批量操作"></a>通过以下脚本批量操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"># 1. KEEP UBUNTU OR DEBIAN UP TO DATE</span><br><span class="line"></span><br><span class="line">sudo apt-get -y update</span><br><span class="line">sudo apt-get -y upgrade</span><br><span class="line">sudo apt-get -y dist-upgrade</span><br><span class="line">sudo apt-get -y autoremove</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 2. INSTALL THE DEPENDENCIES</span><br><span class="line"></span><br><span class="line"># Build tools:</span><br><span class="line">sudo apt-get install -y build-essential cmake</span><br><span class="line"></span><br><span class="line"># GUI (if you want to use GTK instead of Qt, replace &apos;qt5-default&apos; with &apos;libgtkglext1-dev&apos; and remove &apos;-DWITH_QT=ON&apos; option in CMake):</span><br><span class="line">sudo apt-get install -y qt5-default libvtk6-dev</span><br><span class="line"></span><br><span class="line"># Media I/O:</span><br><span class="line">sudo apt-get install -y zlib1g-dev libjpeg-dev libwebp-dev libpng-dev libtiff5-dev libjasper-dev libopenexr-dev libgdal-dev</span><br><span class="line"></span><br><span class="line"># Video I/O:</span><br><span class="line">sudo apt-get install -y libdc1394-22-dev libavcodec-dev libavformat-dev libswscale-dev libtheora-dev libvorbis-dev libxvidcore-dev libx264-dev yasm libopencore-amrnb-dev libopencore-amrwb-dev libv4l-dev libxine2-dev</span><br><span class="line"></span><br><span class="line"># Parallelism and linear algebra libraries:</span><br><span class="line">sudo apt-get install -y libtbb-dev libeigen3-dev</span><br><span class="line"></span><br><span class="line"># Python:</span><br><span class="line">sudo apt-get install -y python-dev python-tk python-numpy python3-dev python3-tk python3-numpy</span><br><span class="line"></span><br><span class="line"># Java:</span><br><span class="line"># sudo apt-get install -y ant default-jdk</span><br><span class="line"></span><br><span class="line"># Documentation:</span><br><span class="line">sudo apt-get install -y doxygen</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 3. INSTALL THE LIBRARY (YOU CAN CHANGE &apos;3.2.0&apos; FOR THE LAST STABLE VERSION)</span><br><span class="line"></span><br><span class="line">sudo apt-get install -y unzip wget</span><br><span class="line">wget https://github.com/opencv/opencv/archive/3.2.0.zip</span><br><span class="line">unzip 3.2.0.zip</span><br><span class="line">rm 3.2.0.zip</span><br><span class="line">mv opencv-3.2.0 OpenCV</span><br><span class="line">cd OpenCV</span><br><span class="line">mkdir build</span><br><span class="line">cd build</span><br><span class="line">cmake -DWITH_QT=ON -DWITH_OPENGL=ON -DFORCE_VTK=ON -DWITH_TBB=ON -DWITH_GDAL=ON -DWITH_XINE=ON -DBUILD_EXAMPLES=ON -DENABLE_PRECOMPILED_HEADERS=OFF ..</span><br><span class="line">make -j4</span><br><span class="line">sudo make install</span><br><span class="line">sudo ldconfig</span><br></pre></td></tr></table></figure><ol><li>如已安装上面部分内容，可直接注释，如本地安装了jdk，就直接#</li><li>安装的opencv版本可自行修改</li><li>下载安装内容比较多，时间很长</li></ol><hr><p>安装过程可能提示：Add the installation prefix of “Qt5Concurrent” to CMAKE_PREFIX_PATH or set   “Qt5Concurrent_DIR” to a directory containing one of the above files.  If   “Qt5Concurrent” provides a separate development package or SDK, be sure it   has been installed</p><p>可以参见这篇文件。<a href="https://stackoverflow.com/questions/24378473/ubuntu-opencv-install-and-setup-qt5/27406016#27406016" target="_blank" rel="noopener">https://stackoverflow.com/questions/24378473/ubuntu-opencv-install-and-setup-qt5/27406016#27406016</a></p><h2 id="检查安装是否成功"><a href="#检查安装是否成功" class="headerlink" title="检查安装是否成功"></a>检查安装是否成功</h2><p>参考：<br><a href="http://wiki.opencv.org.cn/index.php/Debian%E4%B8%8B%E5%AE%89%E8%A3%85" target="_blank" rel="noopener">http://wiki.opencv.org.cn/index.php/Debian%E4%B8%8B%E5%AE%89%E8%A3%85</a></p><p>其它说明：<a href="https://www.pyimagesearch.com/opencv-tutorials-resources-guides/" target="_blank" rel="noopener">https://www.pyimagesearch.com/opencv-tutorials-resources-guides/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;opencv流行已久，下面来讲一波debian上安装说明&lt;/p&gt;
+&lt;h2 id=&quot;从debian仓库安装依赖&quot;&gt;&lt;a href=&quot;#从debian仓库安装依赖&quot; class=&quot;headerlink&quot; title=&quot;从debian仓库安装依赖&quot;&gt;&lt;/a&gt;从debian仓库安装
+      
+    
+    </summary>
+    
+    
+      <category term="opencv" scheme="http://www.whatistest.com/tags/opencv/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>open-stf 源码编译运行</title>
+    <link href="http://www.whatistest.com/2018/11/11/openstf/stfbuild/"/>
+    <id>http://www.whatistest.com/2018/11/11/openstf/stfbuild/</id>
+    <published>2018-11-11T07:55:32.869Z</published>
+    <updated>2018-11-11T07:55:32.869Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="下载open-stf源码"><a href="#下载open-stf源码" class="headerlink" title="下载open-stf源码"></a>下载open-stf源码</h1><p><a href="https://github.com/openstf/stf" target="_blank" rel="noopener">https://github.com/openstf/stf</a></p><h1 id="安装open-stf到本地"><a href="#安装open-stf到本地" class="headerlink" title="安装open-stf到本地"></a>安装open-stf到本地</h1><ul><li>sudo npm install （可选）</li><li>cnpm install (推荐使用淘宝镜像) 实操发现，此步骤会自动编译，无需执行下面命令<h1 id="安装package-json"><a href="#安装package-json" class="headerlink" title="安装package.json"></a>安装package.json</h1>cnpm install package.json<h1 id="编译-angular-开发，用的是gulp构建工具"><a href="#编译-angular-开发，用的是gulp构建工具" class="headerlink" title="编译(angular 开发，用的是gulp构建工具)"></a>编译(angular 开发，用的是gulp构建工具)</h1>gulp clean &amp;&amp; gulp webpack:build</li></ul><p>安装过程中可能会提示某些module 没有安装，使用cnpm install module</p><h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><p>stf local</p><p>问题：</p><ul><li>ERROR in Node Sass does not yet support your current environment: Linux 64-bit with Unsupported runtime (59)<br>查看npm package版本 cnpm ls node-sass 应该是大于3.8的，然后重新编译npm rebuild node-sass就不会抛出哦</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;下载open-stf源码&quot;&gt;&lt;a href=&quot;#下载open-stf源码&quot; class=&quot;headerlink&quot; title=&quot;下载open-stf源码&quot;&gt;&lt;/a&gt;下载open-stf源码&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/op
+      
+    
+    </summary>
+    
+    
+      <category term="open-stf" scheme="http://www.whatistest.com/tags/open-stf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>openstf免登录</title>
+    <link href="http://www.whatistest.com/2018/11/11/openstf/stfdevelopment/"/>
+    <id>http://www.whatistest.com/2018/11/11/openstf/stfdevelopment/</id>
+    <published>2018-11-11T07:55:32.869Z</published>
+    <updated>2018-11-11T07:55:32.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>openstf已经很流行了现在有个需求，需要把openstf介入到现有系统中，直接跳转到设备管理页面， 话不多说，直接上代码</p><h3 id="以下为stf源码中mock登录"><a href="#以下为stf源码中mock登录" class="headerlink" title="以下为stf源码中mock登录"></a>以下为stf源码中mock登录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">app.post(&apos;/auth/api/v1/mock&apos;, function(req, res) &#123;</span><br><span class="line">    var log = logger.createLogger(&apos;auth-mock&apos;)</span><br><span class="line">    log.setLocalIdentifier(req.ip)</span><br><span class="line">    switch (req.accepts([&apos;json&apos;])) &#123;</span><br><span class="line">      case &apos;json&apos;:</span><br><span class="line">        requtil.validate(req, function() &#123;</span><br><span class="line">            req.checkBody(&apos;name&apos;).notEmpty()</span><br><span class="line">            req.checkBody(&apos;email&apos;).isEmail()</span><br><span class="line">          &#125;)</span><br><span class="line">          .then(function() &#123;</span><br><span class="line">            log.info(&apos;Authenticated &quot;%s&quot;&apos;, req.body.email)</span><br><span class="line">            var token = jwtutil.encode(&#123;</span><br><span class="line">              payload: &#123;</span><br><span class="line">                email: req.body.email</span><br><span class="line">              , name: req.body.name</span><br><span class="line">              &#125;</span><br><span class="line">            , secret: options.secret</span><br><span class="line">            , header: &#123;</span><br><span class="line">                exp: Date.now() + 24 * 3600</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;)</span><br><span class="line"></span><br><span class="line">            log.info(&apos;stf login token: &apos;, urlutil.addParams(options.appUrl, &#123;</span><br><span class="line">              jwt: token</span><br><span class="line">            &#125;))</span><br><span class="line">            res.status(200)</span><br><span class="line">              .json(&#123;</span><br><span class="line">                success: true</span><br><span class="line">              , redirect: urlutil.addParams(options.appUrl, &#123;</span><br><span class="line">                  jwt: token</span><br><span class="line">                &#125;)</span><br><span class="line">              &#125;)</span><br><span class="line">          &#125;)</span><br><span class="line">          .catch(requtil.ValidationError, function(err) &#123;</span><br><span class="line">            res.status(400)</span><br><span class="line">              .json(&#123;</span><br><span class="line">                success: false</span><br><span class="line">              , error: &apos;ValidationError&apos;</span><br><span class="line">              , validationErrors: err.errors</span><br><span class="line">              &#125;)</span><br><span class="line">          &#125;)</span><br><span class="line">          .catch(function(err) &#123;</span><br><span class="line">            log.error(&apos;Unexpected error&apos;, err.stack)</span><br><span class="line">            res.status(500)</span><br><span class="line">              .json(&#123;</span><br><span class="line">                success: false</span><br><span class="line">              , error: &apos;ServerError&apos;</span><br><span class="line">              &#125;)</span><br><span class="line">          &#125;)</span><br><span class="line">        break</span><br><span class="line">      default:</span><br><span class="line">        res.send(406)</span><br><span class="line">        break</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure><ol><li>重点看一下 redirect: urlutil.addParams(options.appUrl, {jwt: token})这段代码，意思是生成的token为jwt入参，跳转到设备管理页面，大家可以以日志的形式，将urlutil.addParams(options.appUrl, {jwt: token})打印出来，复制到浏览器直接访问，即可进到设备管理页面</li><li>有了上面的知识点，于是继续看下面的代码<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">app.get(&apos;/auth/api/v1/url&apos;, function(req, res) &#123;</span><br><span class="line">    var log = logger.createLogger(&apos;auth-api-url&apos;)</span><br><span class="line">    log.setLocalIdentifier(req.ip)</span><br><span class="line">    var userName = req.query.username</span><br><span class="line">    log.info(&apos;传入的username: &apos; + userName)</span><br><span class="line">    if(userName) &#123;</span><br><span class="line">      var token = jwtutil.encode(&#123;</span><br><span class="line">        payload: &#123;</span><br><span class="line">          email: userName + &apos;@zbj.com&apos;</span><br><span class="line">          , name: userName</span><br><span class="line">        &#125;</span><br><span class="line">        , secret: options.secret</span><br><span class="line">        , header: &#123;</span><br><span class="line">          exp: Date.now() + 24 * 3600</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">      log.info(&apos;生成的token &apos; + token)</span><br><span class="line">      var respStr = urlutil.addParams(options.appUrl, &#123;</span><br><span class="line">        jwt: token</span><br><span class="line">      &#125;)</span><br><span class="line">      log.warn(&apos;返回的登录地址 &apos; + respStr)</span><br><span class="line">      // 渲染列表页面，支持跨域</span><br><span class="line">      res.header(&apos;Access-Control-Allow-Origin&apos;, &apos;*&apos;)</span><br><span class="line">      res.jsonp(&#123;url: respStr&#125;)</span><br><span class="line">    &#125;</span><br><span class="line">   else &#123;</span><br><span class="line">    res.status(400)</span><br><span class="line">      .json(&#123;</span><br><span class="line">        success: false</span><br><span class="line">        , error: &apos;ValidationError&apos;</span><br><span class="line">        , validationErrors: err.errors</span><br><span class="line">      &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure></li></ol><p>只需要输入一个username就可以登录系统，如果用户不存在，openstf会自动添加一条用户记录，usermail这里是直接拼接的，也可以直接转入usermail,username</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;openstf已经很流行了现在有个需求，需要把openstf介入到现有系统中，直接跳转到设备管理页面， 话不多说，直接上代码&lt;/p&gt;
+&lt;h3 id=&quot;以下为stf源码中mock登录&quot;&gt;&lt;a href=&quot;#以下为stf源码中mock登录&quot; class=&quot;headerlink&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="open-stf" scheme="http://www.whatistest.com/tags/open-stf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>open-stf 安装篇（linux）</title>
+    <link href="http://www.whatistest.com/2018/11/11/openstf/stfinstall/"/>
+    <id>http://www.whatistest.com/2018/11/11/openstf/stfinstall/</id>
+    <published>2018-11-11T07:55:32.869Z</published>
+    <updated>2018-11-11T07:55:32.869Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="第一种-方式前置依赖如下："><a href="#第一种-方式前置依赖如下：" class="headerlink" title="第一种 方式前置依赖如下："></a>第一种 方式前置依赖如下：</h1><h2 id="基础命令依赖如下-以下为debian类linux命令"><a href="#基础命令依赖如下-以下为debian类linux命令" class="headerlink" title="基础命令依赖如下(以下为debian类linux命令)"></a>基础命令依赖如下(以下为debian类linux命令)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update </span><br><span class="line">sudo apt-get install -y git</span><br><span class="line">sudo apt-get install -y curl</span><br><span class="line">sudo apt-get install -y android-tools-adb </span><br><span class="line">sudo apt-get install -y python </span><br><span class="line">sudo apt-get install -y autoconf </span><br><span class="line">sudo apt-get install -y automake </span><br><span class="line">sudo apt-get install -y libtool </span><br><span class="line">sudo apt-get install -y build-essential </span><br><span class="line">sudo apt-get install -y ninja-build </span><br><span class="line">sudo apt-get install -y libzmq3-dev </span><br><span class="line">sudo apt-get install -y libprotobuf-dev </span><br><span class="line">sudo apt-get install -y graphicsmagick </span><br><span class="line">sudo apt-get install -y yasm </span><br><span class="line">sudo apt-get install -y stow</span><br></pre></td></tr></table></figure><p>以上命令，建议从上至下逐个执行，方便查看安装提示</p><h2 id="1-JDK-已安装忽略"><a href="#1-JDK-已安装忽略" class="headerlink" title="1. JDK(已安装忽略)"></a>1. JDK(已安装忽略)</h2><ul><li><a href="http://www.oracle.com/technetwork/cn/java/javase/downloads/jdk8-downloads-2133151-zhs.html" target="_blank" rel="noopener">下载地址</a></li><li>配置变量</li></ul><h2 id="2-安装rethinkdb"><a href="#2-安装rethinkdb" class="headerlink" title="2. 安装rethinkdb"></a>2. 安装rethinkdb</h2><p><a href="https://www.rethinkdb.com/docs/install/debian/" target="_blank" rel="noopener">详细参考官方链接</a></p><h2 id="3-安装nodejs-npm"><a href="#3-安装nodejs-npm" class="headerlink" title="3.安装nodejs/npm"></a>3.安装nodejs/npm</h2><p><a href="https://docs.npmjs.com/getting-started/installing-node" target="_blank" rel="noopener">详细参考官方链接</a></p><ul><li><p>debian命令如下:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -y nodejs</span><br><span class="line">sudo apt install -y npm</span><br><span class="line">sudo apt install -y npm</span><br></pre></td></tr></table></figure></li><li><p>更新node npm 到最新稳定版</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g n</span><br><span class="line">n stable</span><br></pre></td></tr></table></figure></li></ul><h2 id="4-安装bower"><a href="#4-安装bower" class="headerlink" title="4.安装bower"></a>4.安装bower</h2><p>客户端技术的软件包管理器，用于搜索、安装和卸载如JavaScript、HTML、CSS之类的网络资源<br><a href="https://bower.io/" target="_blank" rel="noopener">详细参考官方链接</a></p><h2 id="5-安装ZeroMQ"><a href="#5-安装ZeroMQ" class="headerlink" title="5.安装ZeroMQ"></a>5.安装ZeroMQ</h2><p><a href="http://zeromq.org/intro:get-the-software" target="_blank" rel="noopener">详细参考官方链接</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Downloads </span><br><span class="line">wget http://download.zeromq.org/zeromq-4.2.3.tar.gz </span><br><span class="line">tar -zxvf zeromq-4.2.3.tar.gz</span><br><span class="line">cd zeromq-4.2.3</span><br><span class="line">sudo ./configure --without-libsodium --prefix=/usr/local/stow/zeromq-4.2.3</span><br><span class="line">sudo make</span><br><span class="line">sudo make install</span><br><span class="line">cd /usr/local/stow</span><br><span class="line">sudo stow -vv zeromq-4.2.3</span><br></pre></td></tr></table></figure><h2 id="6-安装-Google-protobuf"><a href="#6-安装-Google-protobuf" class="headerlink" title="6.安装 Google protobuf"></a>6.安装 Google protobuf</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br><span class="line">sudo apt-get install dh-autoreconf</span><br><span class="line"></span><br><span class="line">cd ~/Downloads</span><br><span class="line">git clone https://github.com/google/protobuf.git</span><br><span class="line">cd protobuf</span><br><span class="line">sudo ./autogen.sh</span><br><span class="line">sudo ./configure --prefix=/usr/local/stow/protobuf-`git rev-parse --short HEAD`</span><br><span class="line">sudo make</span><br><span class="line">sudo make install</span><br><span class="line">cd /usr/local/stow</span><br><span class="line">sudo stow -vv protobuf-*</span><br></pre></td></tr></table></figure><h2 id="7-更新library-path"><a href="#7-更新library-path" class="headerlink" title="7. 更新library path"></a>7. 更新library path</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ldconfig</span><br></pre></td></tr></table></figure><h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>npm install -g stf</p><hr><p>国内你也可以使用cnpm，<a href="http://npm.taobao.org/" target="_blank" rel="noopener">参考</a></p><h3 id="源码安装说明"><a href="#源码安装说明" class="headerlink" title="源码安装说明"></a>源码安装说明</h3><p>如果使用npm 或 cnpm 安装失败，可以尝试用源码方式安装</p><h4 id="1-下载stf源码"><a href="#1-下载stf源码" class="headerlink" title="1. 下载stf源码"></a>1. 下载stf源码</h4><p><a href="git@github.com:openstf/stf.git">源码地址</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:openstf/stf.git</span><br></pre></td></tr></table></figure></p><h4 id="2-进入源码目录安装，命令如下"><a href="#2-进入源码目录安装，命令如下" class="headerlink" title="2. 进入源码目录安装，命令如下"></a>2. 进入源码目录安装，命令如下</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install 或者 cnpm install</span><br></pre></td></tr></table></figure><h4 id="3-安装后link全局方式"><a href="#3-安装后link全局方式" class="headerlink" title="3. 安装后link全局方式"></a>3. 安装后link全局方式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm link 或者 cnpm link</span><br></pre></td></tr></table></figure><h2 id="验证安装是否成功"><a href="#验证安装是否成功" class="headerlink" title="验证安装是否成功"></a>验证安装是否成功</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sft doctor</span><br></pre></td></tr></table></figure><h2 id="运行命令如下"><a href="#运行命令如下" class="headerlink" title="运行命令如下"></a>运行命令如下</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. rethinkdb &amp; adb start-server</span><br><span class="line">2. stf local --public-ip &lt;ip address&gt;</span><br></pre></td></tr></table></figure><h2 id="访问方式"><a href="#访问方式" class="headerlink" title="访问方式"></a>访问方式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://&lt;your_ip_address&gt;:7100</span><br></pre></td></tr></table></figure><h1 id="第二种-docker安装方式"><a href="#第二种-docker安装方式" class="headerlink" title="第二种 docker安装方式"></a>第二种 docker安装方式</h1><h2 id="1-安装docker"><a href="#1-安装docker" class="headerlink" title="1.安装docker"></a>1.安装docker</h2><p><a href="https://docs.docker.com/engine/installation/linux/docker-ce/debian/" target="_blank" rel="noopener">详见官方文档</a></p><h2 id="2-拉去镜像"><a href="#2-拉去镜像" class="headerlink" title="2.拉去镜像"></a>2.拉去镜像</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo docker pull openstf/stf:latest # STF镜像</span><br><span class="line">sudo docker pull sorccu/adb:latest # android adb 镜像</span><br><span class="line">sudo docker pull rethinkdb:latest # rethinkdb 镜像</span><br><span class="line">sudo docker pull openstf/ambassador:latest</span><br><span class="line">sudo docker pull nginx:latest # nginx 代理镜像</span><br></pre></td></tr></table></figure><h2 id="3-检查镜像"><a href="#3-检查镜像" class="headerlink" title="3.检查镜像"></a>3.检查镜像</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker images</span><br></pre></td></tr></table></figure><h2 id="4-启动镜像"><a href="#4-启动镜像" class="headerlink" title="4.启动镜像"></a>4.启动镜像</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- docker run -d --name rethinkdb -v /srv/rethinkdb:/data --net host rethinkdb rethinkdb --bind all --cache-size 8192 --http-port 8090</span><br><span class="line">- docker run -d --name adbd --privileged -v /dev/bus/usb:/dev/bus/usb --net host sorccu/adb:latest</span><br><span class="line">- docker run -d --name stf --net host openstf/stf stf local --public-ip &lt;your-ip&gt;</span><br><span class="line">- sudo docker ps -a</span><br></pre></td></tr></table></figure><hr><p>网上文档如下：<br><a href="https://my.oschina.net/u/2474096/blog/1359161" target="_blank" rel="noopener">https://my.oschina.net/u/2474096/blog/1359161</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;第一种-方式前置依赖如下：&quot;&gt;&lt;a href=&quot;#第一种-方式前置依赖如下：&quot; class=&quot;headerlink&quot; title=&quot;第一种 方式前置依赖如下：&quot;&gt;&lt;/a&gt;第一种 方式前置依赖如下：&lt;/h1&gt;&lt;h2 id=&quot;基础命令依赖如下-以下为debian类li
+      
+    
+    </summary>
+    
+    
+      <category term="open-stf" scheme="http://www.whatistest.com/tags/open-stf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>openstf二次开发之分析源码第一篇(登录组件)</title>
+    <link href="http://www.whatistest.com/2018/11/11/openstf/stfnote1/"/>
+    <id>http://www.whatistest.com/2018/11/11/openstf/stfnote1/</id>
+    <published>2018-11-11T07:55:32.869Z</published>
+    <updated>2018-11-11T07:55:32.869Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前面我们已经了解了openstf的安装、编译，现在我们就开始分析源码，openstf提供了两种登录方式如下：</p><ol><li>ldap</li><li>mock</li></ol><p>看<a href="https://github.com/openstf/stf/blob/master/doc/DEPLOYMENT.md#stf-authservice" target="_blank" rel="noopener">openstf开发文档</a>说明还提供了OAuth2.0，似乎只对Docker deployment.下面以mock为例，简单说明一下。</p><h2 id="首先介绍下openstf整体目录结构"><a href="#首先介绍下openstf整体目录结构" class="headerlink" title="首先介绍下openstf整体目录结构"></a>首先介绍下openstf整体目录结构</h2><p>├── bin ———————————————- 启动目录<br>├── bower.json ————————————–bower包管理配置文件<br>├── CHANGELOG.md——————————–变更说明<br>├── CONTRIBUTING.md<br>├── doc————————————————文档说明<br>├── docker——————————————–Docker镜像<br>├── Dockerfile—————————————-Docker配置文件<br>├── DONATION-TRANSPARENCY.md<br>├── gulpfile.js—————————————-gulp自动构建文件<br>├── ISSUE_TEMPLATE.md<br>├── lib ————————————————后端项目<br>├── LICENSE<br>├── node_modules<br>├── package.json<br>├── README.md<br>├── res————————————————前端项目<br>├── test ———————————————-检测项目<br>├── TESTING.md<br>├── tmp<br>├── vendor——————————————–安装目录<br>├── webpack.config.js<br>└── yarn.lock<br>note: 目录成树桩显示，用的是tree -L 1 命令</p><p>open-stf用的是模块化开发，通过webpack.config.js可以知道app, authldap, authmock三个入口，即模块</p><h2 id="mock登录"><a href="#mock登录" class="headerlink" title="mock登录"></a>mock登录</h2><h3 id="1-mock前端部分"><a href="#1-mock前端部分" class="headerlink" title="1. mock前端部分"></a>1. mock前端部分</h3><p>路径：/stf/res/auth/mock<br>├── scripts<br>│   ├── entry.js<br>│   └── signin<br>│       ├── index.js<br>│       ├── signin-controller.js<br>│       ├── signin.css<br>│       └── signin.pug<br>└── views<br>    └── index.pug</p><ul><li><p>首先需要了解的是entry.js(webpack)入口配置点，<a href="http://www.css88.com/doc/webpack2/guides/code-splitting-require" target="_blank" rel="noopener">webpack详细配置说明</a><br>包含两个部分，<br>一是依赖的模块<br>require(‘nine-bootstrap’)<br>require(‘angular’)<br>require(‘angular-route’)<br>require(‘angular-touch’)<br>require(‘./signin’).name &gt;&gt; 首页模块<br>二是angular模块的初始化和route配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$locationProvider.html5Mode -开启html5</span><br><span class="line">$routeProvider</span><br><span class="line">      .otherwise(&#123;</span><br><span class="line">        redirectTo: &apos;/auth/mock/&apos;</span><br><span class="line">      &#125;)</span><br><span class="line">      配置跳转路由</span><br></pre></td></tr></table></figure><p>通过entry.js的配置，我们知道页面将跳转到’/auth/mock’</p></li><li></li></ul><h3 id="2-mock后端部分"><a href="#2-mock后端部分" class="headerlink" title="2. mock后端部分"></a>2. mock后端部分</h3><p>路径：/stf/lib/units/auth<br>├── ldap.js<br>├── mock.js<br>├── oauth2<br>│   ├── index.js<br>│   └── strategy.js<br>├── openid.js<br>└── saml2.js<br>mock.js为mock部分后端源码</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;前面我们已经了解了openstf的安装、编译，现在我们就开始分析源码，openstf提供了两种登录方式如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ld
+      
+    
+    </summary>
+    
+    
+      <category term="open-stf" scheme="http://www.whatistest.com/tags/open-stf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 进程 线程 并发 并行</title>
+    <link href="http://www.whatistest.com/2018/11/11/python/python_consurrent/"/>
+    <id>http://www.whatistest.com/2018/11/11/python/python_consurrent/</id>
+    <published>2018-11-11T07:55:32.869Z</published>
+    <updated>2018-11-11T07:55:32.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>相关名称解释</p><ol><li>进程： 操作系统可以同时运行多个任务，对于操作系统来说，一个任务就是一个进程（Process），比如打开一个浏览器就是启动一个浏览器进程，打开一个记事本就启动了一个记事本进程，打开两个记事本就启动了两个记事本进程，打开一个Word就启动了一个Word进程<br>举个栗子：<br>你一边玩游戏一边听歌，我们的大脑就开始多个而“进程”，同时进行多个任务呢</li><li>线程： 有时候你发现word进程还不止同时干一件事，比如它可以同时进行打字、拼写检查、打印等事情。在一个进程内部，要同时干多件事，就需要同时运行多个“子任务”，我们把进程内的这些“子任务”称为线程（Thread）<br>举个栗子：<br>我们在玩游戏的时候，手的动作算个任务（也就是线程），我们10个手指怎么协调，就可以看成多个线程</li><li>并行、并发：引用一下Erlang 之父 Joe Armstrong的解释，你的年龄大于5岁，相信你看懂了<br><img src="https://pic4.zhimg.com/80/v2-674f0d37fca4fac1bd2df28a2b78e633_hd.jpg" alt=""></li></ol><ul><li>并发是两个队列交替使用一台咖啡机</li><li>并行是两个队列同时使用两台咖啡机<br>理解并发或并行的关键在于CPU的使用情况，如果多个线程共用一个CPU交替执行任务就是并发，如果多个线程多个CPU交替执行就是并行，不难看出并行是并发的一个子集。<br><a href="https://www.zhihu.com/question/33515481" target="_blank" rel="noopener">名称解释参考</a></li></ul><ol start="4"><li>GIL: GIL全称Global Interpreter Lock, GIL并不是Python的特性，它是在实现Python解析器(CPython)时所引入的一个概念。就好比C++是一套语言（语法）标准，但是可以用不同的编译器来编译成可执行代码。有名的编译器例如GCC，INTEL C++，Visual C++等。Python也一样，同样一段代码可以通过CPython，PyPy，Psyco等不同的Python执行环境来执行。像其中的JPython就没有GIL。然而因为CPython是大部分环境下默认的Python执行环境。所以在很多人的概念里CPython就是Python，也就想当然的把GIL归结为Python语言的缺陷。所以这里要先明确一点：GIL并不是Python的特性，Python完全可以不依赖于GIL</li></ol><p>理解概念后，可以参考如下大佬们的分享，健步如飞。<br><a href="https://zhuanlan.zhihu.com/p/25377631" target="_blank" rel="noopener">理解python并发编程一篇就够了</a><br><a href="https://zhuanlan.zhihu.com/p/25228075" target="_blank" rel="noopener">从0到1，Python异步编程的演进之路</a><br><a href="https://zhuanlan.zhihu.com/p/31544936" target="_blank" rel="noopener">Python concurrent.future 使用教程及源码初剖</a><br><a href="https://zhuanlan.zhihu.com/p/24960492" target="_blank" rel="noopener">Python多进程并行编程实践-multiprocessing模块</a><br><a href="https://zhuanlan.zhihu.com/p/21465564" target="_blank" rel="noopener">Python并发学习笔记：从协程到GEVENT（一）</a><br>怎么使用已经有很多文档了，不论是好方案，如果不是和你的场景，就不能发挥它的最大价值</p><ul><li>使用场景是CPU密集型</li><li>使用场景是IO密集型</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;相关名称解释&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;进程： 操作系统可以同时运行多个任务，对于操作系统来说，一个任务就是一个进程（Process），比如打开一个浏览器就是启动一个浏览器进程，打开一个记事本就启动了一个记事本进程，打开两个记事本就启动了两个记事本进程，打开一个Word就启
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://www.whatistest.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.whatistest.com/2018/11/11/python/python_generater/"/>
+    <id>http://www.whatistest.com/2018/11/11/python/python_generater/</id>
+    <published>2018-11-11T07:55:32.869Z</published>
+    <updated>2018-11-11T07:55:32.869Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://python3-cookbook.readthedocs.io/zh_CN/latest/c09/p11_write_decorators_that_add_arguments_to_functions.html" target="_blank" rel="noopener">http://python3-cookbook.readthedocs.io/zh_CN/latest/c09/p11_write_decorators_that_add_arguments_to_functions.html</a></p><p><a href="https://foofish.net/python-decorator.html" target="_blank" rel="noopener">https://foofish.net/python-decorator.html</a></p><p><a href="http://www.cnblogs.com/wilber2013/p/4657155.html" target="_blank" rel="noopener">http://www.cnblogs.com/wilber2013/p/4657155.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://python3-cookbook.readthedocs.io/zh_CN/latest/c09/p11_write_decorators_that_add_arguments_to_functions.html&quot; target=&quot;_blan
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>args,kwargs 元组字典入参</title>
+    <link href="http://www.whatistest.com/2018/11/11/python/python_kwargs/"/>
+    <id>http://www.whatistest.com/2018/11/11/python/python_kwargs/</id>
+    <published>2018-11-11T07:55:32.869Z</published>
+    <updated>2018-11-11T07:55:32.869Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="什么是-args-kwargs"><a href="#什么是-args-kwargs" class="headerlink" title="什么是*args, **kwargs"></a>什么是*args, **kwargs</h3><ol><li>args,kwargs 前面的* ** 是关键</li><li>*args,**kwargs为用户函数定义函数参数（值传递），将不定数量的参数传递给一个函数<h4 id="args"><a href="#args" class="headerlink" title="*args"></a>*args</h4></li><li>用来发送一个非键值对的可变数量的参数列表给一个函数</li><li>例子<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def test_var_args(f_arg, *argv):</span><br><span class="line">    print(&quot;first normal arg:&quot;, f_arg)</span><br><span class="line">    for arg in argv:</span><br><span class="line">        print(&quot;another arg through *argv:&quot;, arg)</span><br><span class="line">test_var_args(&apos;yasoob&apos;, &apos;python&apos;, &apos;eggs&apos;, &apos;test&apos;)</span><br></pre></td></tr></table></figure></li></ol><h4 id="kwargs"><a href="#kwargs" class="headerlink" title="**kwargs"></a>**kwargs</h4><ol><li>允许你将不定长度的键值对, 作为参数传递给一个函数</li><li>例子<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def greet_me(**kwargs):</span><br><span class="line">    for key, value in kwargs.items():</span><br><span class="line">        print(&quot;&#123;0&#125; == &#123;1&#125;&quot;.format(key, value))</span><br><span class="line">greet_me(name=&quot;yasoob&quot;)</span><br></pre></td></tr></table></figure></li></ol><h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def print_arg(*args, **kwargs):</span><br><span class="line">    print(args)</span><br><span class="line">    print(kwargs)</span><br><span class="line">ag = (1, 2, 3)</span><br><span class="line">kag = &#123;&apos;1&apos;: 1, &apos;2&apos;: 2&#125;</span><br><span class="line">print_arg(1, ag, kag, first_kwargs=1)</span><br><span class="line">-</span><br><span class="line">(1, (1, 2, 3), &#123;&apos;1&apos;: 1, &apos;2&apos;: 2&#125;)</span><br><span class="line">&#123;&apos;first_kwargs&apos;: 1&#125;</span><br></pre></td></tr></table></figure><p>标准参数与args,kwargs执行顺序,print_arg(1, ag, kag, first_kwargs=1) 从左往右依次解析。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;什么是-args-kwargs&quot;&gt;&lt;a href=&quot;#什么是-args-kwargs&quot; class=&quot;headerlink&quot; title=&quot;什么是*args, **kwargs&quot;&gt;&lt;/a&gt;什么是*args, **kwargs&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;args,k
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://www.whatistest.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python 规范</title>
+    <link href="http://www.whatistest.com/2018/11/11/python/python_standard/"/>
+    <id>http://www.whatistest.com/2018/11/11/python/python_standard/</id>
+    <published>2018-11-11T07:55:32.869Z</published>
+    <updated>2018-11-11T07:55:32.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>专业的人做专业的事儿，python code standard 需要学会，话不多说，<a href="http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_language_rules/" target="_blank" rel="noopener">参考google分享内容</a></p><p>特别记录一下python命名规范</p><table><thead><tr><th>Type</th><th>column</th><th>Internal</th></tr></thead><tbody><tr><td>Modules</td><td>lower_with_under</td><td>_lower_with_under</td></tr><tr><td>Packages</td><td>lower_with_under</td></tr><tr><td>Classes</td><td>CapWords</td><td>_CapWords</td></tr><tr><td>Exceptions</td><td>CapWords</td></tr><tr><td>Functions</td><td>lower_with_under()</td><td>_lower_with_under()</td></tr><tr><td>Global/Class Constants</td><td>CAPS_WITH_UNDER</td><td>_CAPS_WITH_UNDER</td></tr><tr><td>Global/Class Variables</td><td>lower_with_under</td><td>_lower_with_under</td></tr><tr><td>Instance Variables</td><td>lower_with_under</td><td>_lower_with_under (protected) or __lower_with_under (private)</td></tr><tr><td>Method Names</td><td>lower_with_under()</td><td>_lower_with_under() (protected) or __lower_with_under() (private)</td></tr><tr><td>Function/Method</td><td>Parameters</td><td>lower_with_under</td></tr><tr><td>Local</td><td>Variables</td><td>lower_with_under</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;专业的人做专业的事儿，python code standard 需要学会，话不多说，&lt;a href=&quot;http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_l
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://www.whatistest.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python 调用系统命令</title>
+    <link href="http://www.whatistest.com/2018/11/11/python/python_subprocess/"/>
+    <id>http://www.whatistest.com/2018/11/11/python/python_subprocess/</id>
+    <published>2018-11-11T07:55:32.869Z</published>
+    <updated>2018-11-11T07:55:32.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>直接进入主题，使用subprocess模块调用，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import subprocess</span><br><span class="line">subprocess.Popen([&quot;ping&quot;, &quot;-c&quot;, &quot;5&quot;, &quot;www.baidu.com&quot;], shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)</span><br></pre></td></tr></table></figure></p><ol><li>调用Popen方法</li><li>shell表示我们使用了shell=True这个参数。这个时候，我们使用一整个字符串，而不是一个表来运行子进程。Python将先运行一个shell，再用这个shell来解释这整个字符串。<br>shell命令中有一些是shell的内建命令，这些命令必须通过shell运行，$cd。shell=True允许我们运行这样一些命令</li><li>std表示子进程的标准输入，标准输出和标准错误</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;直接进入主题，使用subprocess模块调用，代码如下：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span 
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://www.whatistest.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python simple and small ORM Peewee(矮小的) 入门篇</title>
+    <link href="http://www.whatistest.com/2018/11/11/python/pythonorm_peewee/"/>
+    <id>http://www.whatistest.com/2018/11/11/python/pythonorm_peewee/</id>
+    <published>2018-11-11T07:55:32.869Z</published>
+    <updated>2018-11-11T07:55:32.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>python ORM 多种多样，如：Django ORM , SQLAlchemy , SqlObject , 今天我们来介绍一款小巧精悍框架，支持的数据库: sqlite,mysql,postgresql , 支持的Python版本: 2.6+ and 3.2+<br><a href="http://docs.peewee-orm.com/en/latest/index.html" target="_blank" rel="noopener">官方文档链接</a></p><h3 id="1-安装peewee"><a href="#1-安装peewee" class="headerlink" title="1. 安装peewee"></a>1. 安装peewee</h3><ul><li><p>pip<br><code>pip install peewee</code></p></li><li><p>source install</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/coleifer/peewee.git</span><br><span class="line">cd peewee</span><br><span class="line">python setup.py install</span><br></pre></td></tr></table></figure></li></ul><h3 id="2-hello-world"><a href="#2-hello-world" class="headerlink" title="2. hello world"></a>2. hello world</h3><h4 id="hello-world-py"><a href="#hello-world-py" class="headerlink" title="hello_world.py"></a>hello_world.py</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">from peewee import *</span><br><span class="line"></span><br><span class="line">DB = SqliteDatabase(&apos;helloworld.db&apos;)</span><br><span class="line"></span><br><span class="line">class BaseModle(Modle):</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">基础模型</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">class Meta():</span><br><span class="line">database = DB</span><br><span class="line"></span><br><span class="line">class HelloWorld(BaseModle):</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">hello world模型</span><br><span class="line">peewee模型及数据库表，表及模型</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">hwid = PrimaryKeyField(unique=True)</span><br><span class="line">hwcontent = CharField()</span><br><span class="line"></span><br><span class="line">@classmethod</span><br><span class="line">def save_info(cls, hw_content):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">保存数据</span><br><span class="line">        &quot;&quot;</span><br><span class="line">HelloWorld(hwcontent=hw_content).save()</span><br><span class="line"></span><br><span class="line">@classmethod</span><br><span class="line">def select_info(cls, hw_content=None):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">        查询数据</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">if hw_content:</span><br><span class="line">cls.select().where(HelloWorld.hwcontent == hw_content)</span><br><span class="line">else:</span><br><span class="line">cls.select()</span><br></pre></td></tr></table></figure><h4 id="test-hello-world-py"><a href="#test-hello-world-py" class="headerlink" title="test_hello_world.py"></a>test_hello_world.py</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">from hello_world import DB, HelloWorld</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def db_test():</span><br><span class="line">    DB.create_tables([HelloWorld], safe=True)</span><br><span class="line">    HelloWorld.save_info(&apos;hello world my peewee.&apos;)</span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    db_test()</span><br><span class="line">    for hw in HelloWorld.select_info():</span><br><span class="line">        print(hw.hwcontent)</span><br></pre></td></tr></table></figure><p>done<br>重点理解peewee vs database 关系表</p><table><thead><tr><th>Thing</th><th>Corresponds to…</th></tr></thead><tbody><tr><td>Model</td><td>Database table</td></tr><tr><td>Field instance</td><td>Column on a table</td></tr><tr><td>Model instance</td><td>Row in a database table</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;python ORM 多种多样，如：Django ORM , SQLAlchemy , SqlObject , 今天我们来介绍一款小巧精悍框架，支持的数据库: sqlite,mysql,postgresql , 支持的Python版本: 2.6+ and 3.2+&lt;br&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://www.whatistest.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记录一次求图像相似度求解过程</title>
+    <link href="http://www.whatistest.com/2018/11/11/tensorflow/similarity/"/>
+    <id>http://www.whatistest.com/2018/11/11/tensorflow/similarity/</id>
+    <published>2018-11-11T07:55:32.869Z</published>
+    <updated>2018-11-11T07:55:32.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>本人测试一枚，对于APP 浏览器兼容性行业或现有平台都是对页面资源优化、页面加载时间等，对于不同手机、不同屏幕尺寸、不同app browser样式的兼容，没有给出明确的说明，说到这里我们就来求解这个问题。</p><ol><li>图像相似度的概念定义涉及内容很多，可以参考如下：<a href="http://www.jsjkx.com/jsjkx/ch/reader/create_pdf.aspx?file_no=20160615&amp;year_id=2016&amp;quarter_id=6&amp;falg=1" target="_blank" rel="noopener">http://www.jsjkx.com/jsjkx/ch/reader/create_pdf.aspx?file_no=20160615&amp;year_id=2016&amp;quarter_id=6&amp;falg=1</a></li><li>图像相似度算法（一） 直方图<br><a href="http://blog.csdn.net/gzlaiyonghao/article/details/2325027" target="_blank" rel="noopener">http://blog.csdn.net/gzlaiyonghao/article/details/2325027</a></li><li>图像相似度算法（二）比如： PSNR、IW-PSNR 可以参考如下：<ul><li>各种算法定义（英文） <a href="https://ece.uwaterloo.ca/~z70wang/research/iwssim/" target="_blank" rel="noopener">https://ece.uwaterloo.ca/~z70wang/research/iwssim/</a></li><li>各种算法定义 (中文) <a href="http://www.cnblogs.com/vincent2012/archive/2012/10/13/2723152.html" target="_blank" rel="noopener">http://www.cnblogs.com/vincent2012/archive/2012/10/13/2723152.html</a><br><a href="http://blog.csdn.net/ecnu18918079120/article/details/60149864" target="_blank" rel="noopener">http://blog.csdn.net/ecnu18918079120/article/details/60149864</a></li><li>msssim 实现 <a href="https://github.com/tensorflow/models/blob/master/research/compression/image_encoder/msssim.py" target="_blank" rel="noopener">https://github.com/tensorflow/models/blob/master/research/compression/image_encoder/msssim.py</a><br>如果是python3运行，请添加tf.gfile.FastGFile打开文件方式，如：tf.gfile.FastGFile(FLAGS.original_image, ‘rb’)</li></ul></li></ol><p>tensorflow msssim 是目前相似度识别比较高的 脚本如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line">#</span><br><span class="line"># Copyright 2016 The TensorFlow Authors. All Rights Reserved.</span><br><span class="line">#</span><br><span class="line"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span><br><span class="line"># you may not use this file except in compliance with the License.</span><br><span class="line"># You may obtain a copy of the License at</span><br><span class="line">#</span><br><span class="line">#     http://www.apache.org/licenses/LICENSE-2.0</span><br><span class="line">#</span><br><span class="line"># Unless required by applicable law or agreed to in writing, software</span><br><span class="line"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span><br><span class="line"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span><br><span class="line"># See the License for the specific language governing permissions and</span><br><span class="line"># limitations under the License.</span><br><span class="line"># ==============================================================================</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;Python implementation of MS-SSIM.</span><br><span class="line">Usage:</span><br><span class="line">python msssim.py --original_image=original.png --compared_image=distorted.png</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">import numpy as np</span><br><span class="line">from scipy import signal</span><br><span class="line">from scipy.ndimage.filters import convolve</span><br><span class="line">import tensorflow as tf</span><br><span class="line"></span><br><span class="line">tf.flags.DEFINE_string(&apos;original_image&apos;, None, &apos;Path to PNG image.&apos;)</span><br><span class="line">tf.flags.DEFINE_string(&apos;compared_image&apos;, None, &apos;Path to PNG image.&apos;)</span><br><span class="line">FLAGS = tf.flags.FLAGS</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def _FSpecialGauss(size, sigma):</span><br><span class="line">    &quot;&quot;&quot;Function to mimic the &apos;fspecial&apos; gaussian MATLAB function.&quot;&quot;&quot;</span><br><span class="line">    radius = size // 2</span><br><span class="line">    offset = 0.0</span><br><span class="line">    start, stop = -radius, radius + 1</span><br><span class="line">    if size % 2 == 0:</span><br><span class="line">        offset = 0.5</span><br><span class="line">        stop -= 1</span><br><span class="line">    x, y = np.mgrid[offset + start:stop, offset + start:stop]</span><br><span class="line">    assert len(x) == size</span><br><span class="line">    g = np.exp(-((x ** 2 + y ** 2) / (2.0 * sigma ** 2)))</span><br><span class="line">    return g / g.sum()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def _SSIMForMultiScale(img1, img2, max_val=255, filter_size=11,</span><br><span class="line">                       filter_sigma=1.5, k1=0.01, k2=0.03):</span><br><span class="line">    &quot;&quot;&quot;Return the Structural Similarity Map between `img1` and `img2`.</span><br><span class="line">    This function attempts to match the functionality of ssim_index_new.m by</span><br><span class="line">    Zhou Wang: http://www.cns.nyu.edu/~lcv/ssim/msssim.zip</span><br><span class="line">    Arguments:</span><br><span class="line">      img1: Numpy array holding the first RGB image batch.</span><br><span class="line">      img2: Numpy array holding the second RGB image batch.</span><br><span class="line">      max_val: the dynamic range of the images (i.e., the difference between the</span><br><span class="line">        maximum the and minimum allowed values).</span><br><span class="line">      filter_size: Size of blur kernel to use (will be reduced for small images).</span><br><span class="line">      filter_sigma: Standard deviation for Gaussian blur kernel (will be reduced</span><br><span class="line">        for small images).</span><br><span class="line">      k1: Constant used to maintain stability in the SSIM calculation (0.01 in</span><br><span class="line">        the original paper).</span><br><span class="line">      k2: Constant used to maintain stability in the SSIM calculation (0.03 in</span><br><span class="line">        the original paper).</span><br><span class="line">    Returns:</span><br><span class="line">      Pair containing the mean SSIM and contrast sensitivity between `img1` and</span><br><span class="line">      `img2`.</span><br><span class="line">    Raises:</span><br><span class="line">      RuntimeError: If input images don&apos;t have the same shape or don&apos;t have four</span><br><span class="line">        dimensions: [batch_size, height, width, depth].</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    if img1.shape != img2.shape:</span><br><span class="line">        raise RuntimeError(&apos;Input images must have the same shape (%s vs. %s).&apos;,</span><br><span class="line">                           img1.shape, img2.shape)</span><br><span class="line">    if img1.ndim != 4:</span><br><span class="line">        raise RuntimeError(&apos;Input images must have four dimensions, not %d&apos;,</span><br><span class="line">                           img1.ndim)</span><br><span class="line"></span><br><span class="line">    img1 = img1.astype(np.float64)</span><br><span class="line">    img2 = img2.astype(np.float64)</span><br><span class="line">    _, height, width, _ = img1.shape</span><br><span class="line"></span><br><span class="line">    # Filter size can&apos;t be larger than height or width of images.</span><br><span class="line">    size = min(filter_size, height, width)</span><br><span class="line"></span><br><span class="line">    # Scale down sigma if a smaller filter size is used.</span><br><span class="line">    sigma = size * filter_sigma / filter_size if filter_size else 0</span><br><span class="line"></span><br><span class="line">    if filter_size:</span><br><span class="line">        window = np.reshape(_FSpecialGauss(size, sigma), (1, size, size, 1))</span><br><span class="line">        mu1 = signal.fftconvolve(img1, window, mode=&apos;valid&apos;)</span><br><span class="line">        mu2 = signal.fftconvolve(img2, window, mode=&apos;valid&apos;)</span><br><span class="line">        sigma11 = signal.fftconvolve(img1 * img1, window, mode=&apos;valid&apos;)</span><br><span class="line">        sigma22 = signal.fftconvolve(img2 * img2, window, mode=&apos;valid&apos;)</span><br><span class="line">        sigma12 = signal.fftconvolve(img1 * img2, window, mode=&apos;valid&apos;)</span><br><span class="line">    else:</span><br><span class="line">        # Empty blur kernel so no need to convolve.</span><br><span class="line">        mu1, mu2 = img1, img2</span><br><span class="line">        sigma11 = img1 * img1</span><br><span class="line">        sigma22 = img2 * img2</span><br><span class="line">        sigma12 = img1 * img2</span><br><span class="line"></span><br><span class="line">    mu11 = mu1 * mu1</span><br><span class="line">    mu22 = mu2 * mu2</span><br><span class="line">    mu12 = mu1 * mu2</span><br><span class="line">    sigma11 -= mu11</span><br><span class="line">    sigma22 -= mu22</span><br><span class="line">    sigma12 -= mu12</span><br><span class="line"></span><br><span class="line">    # Calculate intermediate values used by both ssim and cs_map.</span><br><span class="line">    c1 = (k1 * max_val) ** 2</span><br><span class="line">    c2 = (k2 * max_val) ** 2</span><br><span class="line">    v1 = 2.0 * sigma12 + c2</span><br><span class="line">    v2 = sigma11 + sigma22 + c2</span><br><span class="line">    ssim = np.mean((((2.0 * mu12 + c1) * v1) / ((mu11 + mu22 + c1) * v2)))</span><br><span class="line">    cs = np.mean(v1 / v2)</span><br><span class="line">    return ssim, cs</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def MultiScaleSSIM(img1, img2, max_val=255, filter_size=11, filter_sigma=1.5,</span><br><span class="line">                   k1=0.01, k2=0.03, weights=None):</span><br><span class="line">    &quot;&quot;&quot;Return the MS-SSIM score between `img1` and `img2`.</span><br><span class="line">    This function implements Multi-Scale Structural Similarity (MS-SSIM) Image</span><br><span class="line">    Quality Assessment according to Zhou Wang&apos;s paper, &quot;Multi-scale structural</span><br><span class="line">    similarity for image quality assessment&quot; (2003).</span><br><span class="line">    Link: https://ece.uwaterloo.ca/~z70wang/publications/msssim.pdf</span><br><span class="line">    Author&apos;s MATLAB implementation:</span><br><span class="line">    http://www.cns.nyu.edu/~lcv/ssim/msssim.zip</span><br><span class="line">    Arguments:</span><br><span class="line">      img1: Numpy array holding the first RGB image batch.</span><br><span class="line">      img2: Numpy array holding the second RGB image batch.</span><br><span class="line">      max_val: the dynamic range of the images (i.e., the difference between the</span><br><span class="line">        maximum the and minimum allowed values).</span><br><span class="line">      filter_size: Size of blur kernel to use (will be reduced for small images).</span><br><span class="line">      filter_sigma: Standard deviation for Gaussian blur kernel (will be reduced</span><br><span class="line">        for small images).</span><br><span class="line">      k1: Constant used to maintain stability in the SSIM calculation (0.01 in</span><br><span class="line">        the original paper).</span><br><span class="line">      k2: Constant used to maintain stability in the SSIM calculation (0.03 in</span><br><span class="line">        the original paper).</span><br><span class="line">      weights: List of weights for each level; if none, use five levels and the</span><br><span class="line">        weights from the original paper.</span><br><span class="line">    Returns:</span><br><span class="line">      MS-SSIM score between `img1` and `img2`.</span><br><span class="line">    Raises:</span><br><span class="line">      RuntimeError: If input images don&apos;t have the same shape or don&apos;t have four</span><br><span class="line">        dimensions: [batch_size, height, width, depth].</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    if img1.shape != img2.shape:</span><br><span class="line">        raise RuntimeError(&apos;Input images must have the same shape (%s vs. %s).&apos;,</span><br><span class="line">                           img1.shape, img2.shape)</span><br><span class="line">    if img1.ndim != 4:</span><br><span class="line">        raise RuntimeError(&apos;Input images must have four dimensions, not %d&apos;,</span><br><span class="line">                           img1.ndim)</span><br><span class="line"></span><br><span class="line">    # Note: default weights don&apos;t sum to 1.0 but do match the paper / matlab code.</span><br><span class="line">    weights = np.array(weights if weights else</span><br><span class="line">                       [0.0448, 0.2856, 0.3001, 0.2363, 0.1333])</span><br><span class="line">    levels = weights.size</span><br><span class="line">    downsample_filter = np.ones((1, 2, 2, 1)) / 4.0</span><br><span class="line">    im1, im2 = [x.astype(np.float64) for x in [img1, img2]]</span><br><span class="line">    mssim = np.array([])</span><br><span class="line">    mcs = np.array([])</span><br><span class="line">    for _ in range(levels):</span><br><span class="line">        ssim, cs = _SSIMForMultiScale(</span><br><span class="line">            im1, im2, max_val=max_val, filter_size=filter_size,</span><br><span class="line">            filter_sigma=filter_sigma, k1=k1, k2=k2)</span><br><span class="line">        mssim = np.append(mssim, ssim)</span><br><span class="line">        mcs = np.append(mcs, cs)</span><br><span class="line">        filtered = [convolve(im, downsample_filter, mode=&apos;reflect&apos;)</span><br><span class="line">                    for im in [im1, im2]]</span><br><span class="line">        im1, im2 = [x[:, ::2, ::2, :] for x in filtered]</span><br><span class="line">    return (np.prod(mcs[0:levels - 1] ** weights[0:levels - 1]) *</span><br><span class="line">            (mssim[levels - 1] ** weights[levels - 1]))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main(_):</span><br><span class="line">    if FLAGS.original_image is None or FLAGS.compared_image is None:</span><br><span class="line">        print(&apos;\nUsage: python msssim.py --original_image=original.png &apos;</span><br><span class="line">              &apos;--compared_image=distorted.png\n\n&apos;)</span><br><span class="line">        return</span><br><span class="line"></span><br><span class="line">    if not tf.gfile.Exists(FLAGS.original_image):</span><br><span class="line">        print(&apos;\nCannot find --original_image.\n&apos;)</span><br><span class="line">        return</span><br><span class="line"></span><br><span class="line">    if not tf.gfile.Exists(FLAGS.compared_image):</span><br><span class="line">        print(&apos;\nCannot find --compared_image.\n&apos;)</span><br><span class="line">        return</span><br><span class="line"></span><br><span class="line">    with tf.gfile.FastGFile(FLAGS.original_image, &apos;rb&apos;) as image_file:</span><br><span class="line">        img1_str = image_file.read()</span><br><span class="line">    with tf.gfile.FastGFile(FLAGS.compared_image, &apos;rb&apos;) as image_file:</span><br><span class="line">        img2_str = image_file.read()</span><br><span class="line"></span><br><span class="line">    input_img = tf.placeholder(tf.string)</span><br><span class="line">    decoded_image = tf.expand_dims(tf.image.decode_png(input_img, channels=3), 0)</span><br><span class="line"></span><br><span class="line">    with tf.Session() as sess:</span><br><span class="line">        img1 = sess.run(decoded_image, feed_dict=&#123;input_img: img1_str&#125;)</span><br><span class="line">        img2 = sess.run(decoded_image, feed_dict=&#123;input_img: img2_str&#125;)</span><br><span class="line"></span><br><span class="line">    print((MultiScaleSSIM(img1, img2, max_val=255)))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    tf.app.run()</span><br></pre></td></tr></table></figure></p><p>命令行运行：<br>python msssim.py –original_image=original.png –compared_image=distorted.png</p><p>结构相似对比的基础需要shape相同，如果不同shape图像对比，可以将两张图像转换为同一个尺寸,python 操作库</p><ol><li>skimage(<a href="https://www.jianshu.com/p/f2e88197e81d" target="_blank" rel="noopener">https://www.jianshu.com/p/f2e88197e81d</a>) transform方法</li><li>cv2(opencv-python) resize方法</li></ol><p>ssim 经典案例： <a href="https://www.pyimagesearch.com/2017/06/19/image-difference-with-opencv-and-python/" target="_blank" rel="noopener">https://www.pyimagesearch.com/2017/06/19/image-difference-with-opencv-and-python/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;本人测试一枚，对于APP 浏览器兼容性行业或现有平台都是对页面资源优化、页面加载时间等，对于不同手机、不同屏幕尺寸、不同app browser样式的兼容，没有给出明确的说明，说到这里我们就来求解这个问题。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;图像相似度的概念定义涉及内容很多，可以参考
+      
+    
+    </summary>
+    
+    
+      <category term="tensorflow" scheme="http://www.whatistest.com/tags/tensorflow/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解追加字符（python）</title>
+    <link href="http://www.whatistest.com/2018/11/11/addchar/"/>
+    <id>http://www.whatistest.com/2018/11/11/addchar/</id>
+    <published>2018-11-11T07:55:32.865Z</published>
+    <updated>2018-11-11T07:55:32.865Z</updated>
+    
+    <content type="html"><![CDATA[<p>==日常编码中常遇迭代字符拼接问题，特记录实现思路，供参考，如： [a,b,c,d,e,f] –&gt; a + b + c + d + e + f==</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol><li>设定一个计数器，到最后一个数，就不在拼接字符</li><li>依次拼接完，再单独去掉最后拼接的字符</li></ol><h2 id="实现如下"><a href="#实现如下" class="headerlink" title="实现如下"></a>实现如下</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">思路一：</span><br><span class="line"></span><br><span class="line">def generate_sql(*args):</span><br><span class="line">sql = &apos;sql=&apos;</span><br><span class="line">    arg_count = len(args)</span><br><span class="line">    while True:</span><br><span class="line">        if arg_count == 1:</span><br><span class="line">            sql += args[arg_count - 1]</span><br><span class="line">            break</span><br><span class="line">        else:</span><br><span class="line">            sql += args[arg_count - 1] + &apos; AND &apos;</span><br><span class="line">        arg_count = arg_count - 1</span><br><span class="line">    return sql</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">思路二：</span><br><span class="line"></span><br><span class="line">def generate_sql(*args):</span><br><span class="line">sql = &apos;sql=&apos;</span><br><span class="line">    for arg in args:</span><br><span class="line">    sql += arg + &apos; AND &apos;</span><br><span class="line">   return &apos;&apos;.join(sql.rsplit(&apos; AND &apos;, 1)[:-1])</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;==日常编码中常遇迭代字符拼接问题，特记录实现思路，供参考，如： [a,b,c,d,e,f] –&amp;gt; a + b + c + d + e + f==&lt;/p&gt;
+&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="essay" scheme="http://www.whatistest.com/tags/essay/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>判断一个数据类型传参是引用还是值类型</title>
+    <link href="http://www.whatistest.com/2018/11/11/checkreference/"/>
+    <id>http://www.whatistest.com/2018/11/11/checkreference/</id>
+    <published>2018-11-11T07:55:32.865Z</published>
+    <updated>2018-11-11T07:55:32.865Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="essay" scheme="http://www.whatistest.com/tags/essay/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>closure闭包</title>
+    <link href="http://www.whatistest.com/2018/11/11/closure/"/>
+    <id>http://www.whatistest.com/2018/11/11/closure/</id>
+    <published>2018-11-11T07:55:32.865Z</published>
+    <updated>2018-11-11T07:55:32.865Z</updated>
+    
+    <content type="html"><![CDATA[<p>解释闭包：“内部函数”引用了外部“外部函数”的变量并返回一个函数变量就是一个闭包，起源于内部函数，python一切皆对象</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;解释闭包：“内部函数”引用了外部“外部函数”的变量并返回一个函数变量就是一个闭包，起源于内部函数，python一切皆对象&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://www.whatistest.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记录一次adb异常问题</title>
+    <link href="http://www.whatistest.com/2018/11/11/android/adb_error/"/>
+    <id>http://www.whatistest.com/2018/11/11/android/adb_error/</id>
+    <published>2018-11-11T07:55:32.865Z</published>
+    <updated>2018-11-11T07:55:32.865Z</updated>
+    
+    <content type="html"><![CDATA[<p>android测试过程中,经常用到<a href="https://developer.android.com/studio/command-line/adb.html?hl=zh-cn#howadbworks" target="_blank" rel="noopener">adb</a>命令，在同时使用模拟器和真机调用时候，发现如下异常提示：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* daemon not running. starting it now *   </span><br><span class="line">ADB server didn&apos;t ACK   </span><br><span class="line">* failed to start daemon *</span><br></pre></td></tr></table></figure><p>网上搜索一番都在说模拟器的adb设置为sdk路径，但早就已经设置了，后来发现debian系统默认安装了adb命令(whereis adb查询)<br>于是，使用sdk里面的adb就可以正常查看模拟器和真机devices info.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;android测试过程中,经常用到&lt;a href=&quot;https://developer.android.com/studio/command-line/adb.html?hl=zh-cn#howadbworks&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="android" scheme="http://www.whatistest.com/tags/android/"/>
+    
+  </entry>
+  
+</feed>

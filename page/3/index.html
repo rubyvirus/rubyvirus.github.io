@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Space Test Enginner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Space Test Enginner">
+<meta property="og:url" content="http://www.whatistest.com/page/3/index.html">
+<meta property="og:site_name" content="Space Test Enginner">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Space Test Enginner">
+  
+    <link rel="alternate" href="/atom.xml" title="Space Test Enginner" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Space Test Enginner</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">太空攻城狮</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.whatistest.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-android/android_command" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/11/android/android_command/" class="article-date">
+  <time datetime="2018-11-11T07:55:32.865Z" itemprop="datePublished">2018-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/11/android/android_command/">android command 小集</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>adb(android debug brige), path: android_sdk/platform-tools/</p>
+<table>
+<thead>
+<tr>
+<th>common commands</th>
+<th>usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>adb devices -l</td>
+<td></td>
+</tr>
+<tr>
+<td>adb tcpip 5555 adb connect device_ip_address</td>
+<td>wifi连接设备</td>
+</tr>
+<tr>
+<td>adb -s serial_number command</td>
+<td></td>
+</tr>
+<tr>
+<td>adb [-d -e -s serial_number] shell shell_command</td>
+<td></td>
+</tr>
+<tr>
+<td>adb shell am start -a android.intent.action.VIEW</td>
+<td></td>
+</tr>
+<tr>
+<td>adb shell pm uninstall com.example.MyApp</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/11/android/android_command/" data-id="cjocl45fi000if8stoy34k9ga" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-appium/appiumforinstall" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/11/appium/appiumforinstall/" class="article-date">
+  <time datetime="2018-11-11T07:55:32.865Z" itemprop="datePublished">2018-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/11/appium/appiumforinstall/">ubuntu16.04 install appium for taobao.org</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="国（中国）内安装appium方式"><a href="#国（中国）内安装appium方式" class="headerlink" title="国（中国）内安装appium方式"></a>国（中国）内安装appium方式</h2><h3 id="1-使用代-理执行命令（npm-install-g-appium）"><a href="#1-使用代-理执行命令（npm-install-g-appium）" class="headerlink" title="1.　使用代\理执行命令（npm install -g appium）"></a>1.　使用代\理执行命令（npm install -g appium）</h3><h3 id="2-使用淘宝-npm-taobao-org-代-理安装"><a href="#2-使用淘宝-npm-taobao-org-代-理安装" class="headerlink" title="2.　使用淘宝(npm.taobao.org)代\理安装"></a>2.　使用淘宝(npm.taobao.org)代\理安装</h3><p>步骤：</p>
+<ol>
+<li>配置淘宝源, <a href="http://npm.taobao.org" target="_blank" rel="noopener">参见</a></li>
+<li>执行命令：sudo cnpm install -g appium</li>
+<li>安装过程中，依赖包会正常下载，检查脚本时候可能会一直卡在 appium-uiautomator2-server-debug-androidTest.apk，不用急Ctrl+C暂停就是，运行/use/lib/node_modules/appium/lib下的main.js，也能正常运行appium</li>
+</ol>
+<h3 id="3-使用源码安装"><a href="#3-使用源码安装" class="headerlink" title="3. 使用源码安装"></a>3. 使用源码安装</h3><p>步骤:</p>
+<ol>
+<li>下载源码，可以git clone xxxx 也可以　wget <a href="https://github.com/appium/appium/archive/v1.6.5.tar.gz" target="_blank" rel="noopener">https://github.com/appium/appium/archive/v1.6.5.tar.gz</a></li>
+<li>解压源码 tar -zxvf appium-xxx　并　从命名为appium</li>
+<li>如果没有代\理，还是用上一步的淘宝源，进入appium目录，运行: sudo cnpm install</li>
+<li>退到appium上级目录，运行: sudo cnpm link    目的：将appium进行软连接，参见npm link 命令详解</li>
+<li>安装过程中可能还是会卡在下载某个文件，继续Ctrl+C 暂停就是</li>
+</ol>
+<p>end.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/11/appium/appiumforinstall/" data-id="cjocl45fp000mf8st12ank8ta" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-python/python_requestschar" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/08/python/python_requestschar/" class="article-date">
+  <time datetime="2018-11-08T16:00:00.000Z" itemprop="datePublished">2018-11-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/08/python/python_requestschar/">requests上传中文filename</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在flask项目中使用requests请求上传文件时，遭遇文件名为中文的烦恼，根源是urllib3对中文支持不优雅，详细可以fields.py文件中value = ‘%s*=%s’ % (name, value)</p>
+<p>来看看一下以下解决方案：</p>
+<ol>
+<li>偷梁换柱的方式</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">files = &#123;&apos;file&apos;: (</span><br><span class="line">        &apos;file_name&apos;, open(file=file_path, mode=&apos;rb&apos;), &apos;application/octet-stream&apos;)&#125;</span><br><span class="line"></span><br><span class="line">requests.post(url, data=&#123;&apos;file_name&apos;: &apos;上传的中文名称&apos;&#125;, files=files)</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>转码中文名称</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">from urllib.parse import quote</span><br><span class="line">files = &#123;&apos;file&apos;: (</span><br><span class="line">        quote(&apos;中文名称&apos;), open(file=file_path, mode=&apos;rb&apos;), &apos;application/octet-stream&apos;)&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/08/python/python_requestschar/" data-id="cjocl45gk001sf8studhrnmj1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-mysql/mysql_1" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/05/mysql/mysql_1/" class="article-date">
+  <time datetime="2018-11-05T16:00:00.000Z" itemprop="datePublished">2018-11-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/05/mysql/mysql_1/">配置mysql远程连接</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本地开发经常会遇到连不上mysql数据库，一般都是配置文件和权限问题，来记录一波吧，出现的问题如下：</p>
+<ol>
+<li>修改mysql配置文件my.cnf(默认)</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Default Homebrew MySQL server config</span><br><span class="line">[mysqld]</span><br><span class="line"># Only allow connections from localhost</span><br><span class="line">bind-address = 0.0.0.0 # 表示任何机器都可以访问</span><br><span class="line">port = 3306  # 连接的端口</span><br><span class="line">skip-grant-tables # 跳过表权限</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>更新Mysql系统权限表</li>
+</ol>
+<p>mysql&gt; use mysq;<br>mysql&gt; select * from user order by host desc,user desc;<br>mysql&gt; update user set host = ‘%’ where user = ‘root’;<br>mysql&gt; flush privileges;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/05/mysql/mysql_1/" data-id="cjocl45g1000yf8stx780w3nh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-go/go_base_gorountine" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/03/go/go_base_gorountine/" class="article-date">
+  <time datetime="2018-11-03T16:00:00.000Z" itemprop="datePublished">2018-11-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/03/go/go_base_gorountine/">golang基础gorountine知识</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="GO-并发（Channel）"><a href="#GO-并发（Channel）" class="headerlink" title="GO 并发（Channel）"></a>GO 并发（Channel）</h1><p>听说 GO 性能方面非常牛逼，记录一下学习过程。</p>
+<blockquote>
+<p>注意  一个概念</p>
+</blockquote>
+<p>并发不是并行： 并发是通过时间切片实现的，并行则是利用计算机的多核功能</p>
+<ol>
+<li>GO 性能设计</li>
+</ol>
+<p>GORountine 奉行通过通信来共享内存，区别于其它通过共享内存来共享通信</p>
+<ol start="2">
+<li>来几个  简单例子</li>
+</ol>
+<h4 id="第一个例子是匿名函数进行-gorountine"><a href="#第一个例子是匿名函数进行-gorountine" class="headerlink" title="第一个例子是匿名函数进行 gorountine"></a>第一个例子是匿名函数进行 gorountine</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">	&quot;fmt&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	c := make(chan bool)</span><br><span class="line">	go func() &#123;</span><br><span class="line">		fmt.Println(&quot;gogogo&quot;)</span><br><span class="line">		c &lt;- true</span><br><span class="line">	&#125;()</span><br><span class="line">	fmt.Println(c)</span><br><span class="line">	&lt;-c</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="第二个例子是需要关闭chan的情况"><a href="#第二个例子是需要关闭chan的情况" class="headerlink" title="第二个例子是需要关闭chan的情况"></a>第二个例子是需要关闭chan的情况</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">	&quot;fmt&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	c := make(chan bool)</span><br><span class="line">	go func() &#123;</span><br><span class="line">		fmt.Println(&quot;gogogo&quot;)</span><br><span class="line">		c &lt;- true</span><br><span class="line">		close(c)</span><br><span class="line">	&#125;()</span><br><span class="line"></span><br><span class="line">	for v := range c &#123;</span><br><span class="line">		fmt.Println(v)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="第二个例子是利用多核展示并行"><a href="#第二个例子是利用多核展示并行" class="headerlink" title="第二个例子是利用多核展示并行"></a>第二个例子是利用多核展示并行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">	&quot;fmt&quot;</span><br><span class="line">	&quot;runtime&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	runtime.GOMAXPROCS(2)</span><br><span class="line">	c := make(chan bool, 10)</span><br><span class="line">	for index := 0; index &lt; 10; index++ &#123;</span><br><span class="line">		go Go(c, index)</span><br><span class="line">	&#125;</span><br><span class="line">	for index := 0; index &lt; 10; index++ &#123;</span><br><span class="line">		&lt;-c</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func Go(c chan bool, index int) &#123;</span><br><span class="line">	a := 1</span><br><span class="line">	for index := 0; index &lt; 100000; index++ &#123;</span><br><span class="line">		a += index</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(index, a)</span><br><span class="line">	c &lt;- true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/03/go/go_base_gorountine/" data-id="cjocl45ft000qf8st7wg39krr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/go/">go</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-python/python_log" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/03/python/python_log/" class="article-date">
+  <time datetime="2018-11-03T16:00:00.000Z" itemprop="datePublished">2018-11-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/03/python/python_log/">python flask log info</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>官方链接</p>
+</blockquote>
+<p><a href="https://dormousehole.readthedocs.io/en/latest/logging.html#id2" target="_blank" rel="noopener">https://dormousehole.readthedocs.io/en/latest/logging.html#id2</a></p>
+<p>在需要</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/11/03/python/python_log/" data-id="cjocl45gi001nf8st7wgu24s0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-python/python_pexpect" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/13/python/python_pexpect/" class="article-date">
+  <time datetime="2018-10-13T16:00:00.000Z" itemprop="datePublished">2018-10-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/13/python/python_pexpect/">python 命令行交互pexpect</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Pexpect 是个纯 Python 语言实现的模块，使用其可以轻松方便的实现与 ssh、ftp、passwd 和 telnet 等程序的自动交互</p>
+<p>官方链接：<a href="https://pexpect.readthedocs.io/en/stable/install.html" target="_blank" rel="noopener">https://pexpect.readthedocs.io/en/stable/install.html</a><br>IBM事例链接：<a href="https://www.ibm.com/developerworks/cn/linux/l-cn-pexpect2/index.html" target="_blank" rel="noopener">https://www.ibm.com/developerworks/cn/linux/l-cn-pexpect2/index.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/10/13/python/python_pexpect/" data-id="cjocl45gj001pf8stcs4rqjku" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-nodejs/callbacktoawait" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/08/nodejs/callbacktoawait/" class="article-date">
+  <time datetime="2018-10-08T16:00:00.000Z" itemprop="datePublished">2018-10-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/08/nodejs/callbacktoawait/">将callback转化为async/await方式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>参考 <a href="https://www.jianshu.com/p/e5bdf60cda15" target="_blank" rel="noopener">https://www.jianshu.com/p/e5bdf60cda15</a></p>
+</blockquote>
+<p>nodejs异步模块已经过度到async/await时期</p>
+<p>最近在使用七牛nodejs sdk上传文件，但官方提供还是callback方式，在koa2里面不是很好用，搜索了一番，在此记录。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var formUploader = new qiniu.form_up.FormUploader(config);</span><br><span class="line">var putExtra = new qiniu.form_up.PutExtra();</span><br><span class="line">var key=&apos;test.txt&apos;;</span><br><span class="line">formUploader.put(uploadToken, key, &quot;hello world&quot;, putExtra, function(respErr,</span><br><span class="line">  respBody, respInfo) &#123;</span><br><span class="line">  if (respErr) &#123;</span><br><span class="line">    throw respErr;</span><br><span class="line">  &#125;</span><br><span class="line">  if (respInfo.statusCode == 200) &#123;</span><br><span class="line">    console.log(respBody);</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    console.log(respInfo.statusCode);</span><br><span class="line">    console.log(respBody);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">const stream_uploader = (token, key, readableStream) =&gt; &#123;</span><br><span class="line">  return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">    formUploader.putStream(token, key, readableStream, putExtra, (res_error, res_body, res_info) =&gt; &#123;</span><br><span class="line">      if (res_error) &#123;</span><br><span class="line">        reject(res_error);</span><br><span class="line">      &#125;</span><br><span class="line">    </span><br><span class="line">      if (res_info.statusCode == 200) &#123;</span><br><span class="line">        reslove(res_body);</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        reject(&#123;</span><br><span class="line">          code: res_info.statusCode,</span><br><span class="line">          body: res_body,</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const main = async () =&gt; &#123;</span><br><span class="line">  // ... 获取token、key业务逻辑</span><br><span class="line"></span><br><span class="line">  // 将obj，转化为 readableStream 流</span><br><span class="line">  const readableStream = await intoStream(JSON.stringify(obj));</span><br><span class="line"></span><br><span class="line">  try &#123;</span><br><span class="line">    const result = await stream_uploader(token, key, readableStream, putExtra);  </span><br><span class="line">  &#125; catch (error) &#123;</span><br><span class="line">    // 处理异常</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">main();</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>参考链接</p>
+</blockquote>
+<ul>
+<li><a href="https://steemit.com/programming/@leighhalliday/converting-geolocation-from-callbacks-into-async-await-javascript" target="_blank" rel="noopener">converting-geolocation-from-callbacks-into-async-await-javascript</a></li>
+<li><a href="https://75team.com/post/how-to-convert-callback-to-promise.html" target="_blank" rel="noopener">how-to-convert-callback-to-promise</a></li>
+<li><a href="https://stackoverflow.com/questions/22519784/how-do-i-convert-an-existing-callback-api-to-promises" target="_blank" rel="noopener">How do I convert an existing callback API to promises?</a></li>
+<li><a href="https://medium.freecodecamp.org/javascript-from-callbacks-to-async-await-1cc090ddad99" target="_blank" rel="noopener">JavaScript — from callbacks to async/await</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/05/async.html" target="_blank" rel="noopener">async 函数的含义和用法</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/10/08/nodejs/callbacktoawait/" data-id="cjocl45g30010f8sthqmney85" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-python/python_spider_music" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/01/python/python_spider_music/" class="article-date">
+  <time datetime="2018-10-01T16:00:00.000Z" itemprop="datePublished">2018-10-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/01/python/python_spider_music/">python拉取云音乐数据</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>不多说，先看代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;抓取云音乐内容</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">import base64</span><br><span class="line">import random</span><br><span class="line">from Crypto.Cipher import AES</span><br><span class="line"></span><br><span class="line">import binascii</span><br><span class="line">import json</span><br><span class="line">import requests</span><br><span class="line">import pymongo</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def random_b(b):</span><br><span class="line">    &quot;&quot;&quot;生成一个任意长度随机数</span><br><span class="line"></span><br><span class="line">    Arguments:</span><br><span class="line">        b &#123;[type]&#125; -- [description]</span><br><span class="line"></span><br><span class="line">    Returns:</span><br><span class="line">        [type] -- [description]</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">    return bytes(&apos;&apos;.join(random.sample(</span><br><span class="line">        &apos;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&apos;,</span><br><span class="line">        b</span><br><span class="line">    )), &apos;utf-8&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">PUB_KEY = &apos;010001&apos;</span><br><span class="line"></span><br><span class="line">MODULUS = &apos;00e0b509f6259df8642dbc35662901477df22677ec152b5ff68ace615bb7b725152b3ab17a876aea8a5aa76d2e417629ec4ee341f56135fccf695280104e0312ecbda92557c93870114af6c9d05c4f7f0c3685b7a46bee255932575cce10b424d813cfe4875d3e82047b97ddef52741d546b8e289dc6935b3ece0462db0a22b8e7&apos;</span><br><span class="line"></span><br><span class="line">SECRET_KEY = &apos;0CoJUm6Qyw8W8jud&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def aes_encrypt(text, key):</span><br><span class="line">    &quot;&quot;&quot;ase加密</span><br><span class="line"></span><br><span class="line">    Arguments:</span><br><span class="line">        text &#123;[type]&#125; -- [description]</span><br><span class="line">        key &#123;[type]&#125; -- [description]</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    # 偏移量</span><br><span class="line">    iv = b&apos;0102030405060708&apos;</span><br><span class="line">    # 对长度不是16倍数的字符串进行补全，然后在转为bytes数据</span><br><span class="line">    pad = 16 - len(text) % 16</span><br><span class="line">    try:</span><br><span class="line">        # 如果接到bytes数据（如第一次aes加密得到的密文）要解码再进行补全</span><br><span class="line">        text = text.decode()</span><br><span class="line">    except:</span><br><span class="line">        pass</span><br><span class="line">    text = text + pad * chr(pad)</span><br><span class="line">    try:</span><br><span class="line">        text = text.encode()</span><br><span class="line">    except:</span><br><span class="line">        pass</span><br><span class="line"></span><br><span class="line">    encryptor = AES.new(key, AES.MODE_CBC, iv)</span><br><span class="line">    ciphertext = encryptor.encrypt(text)</span><br><span class="line">    ciphertext = base64.b64encode(ciphertext).decode(</span><br><span class="line">        &apos;utf-8&apos;)  # 得到的密文还要进行base64编码</span><br><span class="line">    return ciphertext</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def rsa_encrypt(random_char):</span><br><span class="line">    text = random_char[::-1]  # 明文处理，反序并hex编码</span><br><span class="line">    rsa = int(binascii.hexlify(text),</span><br><span class="line">              16) ** int(PUB_KEY, 16) % int(MODULUS, 16)</span><br><span class="line">    return format(rsa, &apos;x&apos;).zfill(256)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def request_param(data):</span><br><span class="line">    &quot;&quot;&quot;构造请求参数</span><br><span class="line"></span><br><span class="line">    Arguments:</span><br><span class="line">        data &#123;[type]&#125; -- [description]</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    text = json.dumps(data)</span><br><span class="line">    random_char = random_b(16)</span><br><span class="line">    params = aes_encrypt(text, SECRET_KEY)  # 两次aes加密</span><br><span class="line">    params = aes_encrypt(params, random_char)</span><br><span class="line">    enc_sec_key = rsa_encrypt(random_char)</span><br><span class="line">    data = &#123;</span><br><span class="line">        &apos;params&apos;: params,</span><br><span class="line">        &apos;encSecKey&apos;: enc_sec_key</span><br><span class="line">    &#125;</span><br><span class="line">    return data</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">HEADERS = &#123;</span><br><span class="line">    &apos;Connection&apos;: &apos;keep-alive&apos;,</span><br><span class="line">    &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36&apos;,</span><br><span class="line">    &apos;Host&apos;: &apos;music.163.com&apos;,</span><br><span class="line">    &apos;Origin&apos;: &apos;https://music.163.com&apos;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def find_song_content(song_id):</span><br><span class="line">    &quot;&quot;&quot;根据歌曲ID查询歌词</span><br><span class="line"></span><br><span class="line">    Arguments:</span><br><span class="line">        song_id &#123;[type]&#125; -- [description]</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    referer = &apos;https://music.163.com/song?id=&apos; + song_id</span><br><span class="line">    HEADERS[&apos;referer&apos;] = referer</span><br><span class="line">    url = &apos;https://music.163.com/weapi/song/lyric?csrf_token=&apos;</span><br><span class="line">    param = &#123;&apos;id&apos;: song_id, &apos;lv&apos;: -1, &apos;tv&apos;: -1, &apos;csrf_token&apos;: &apos;&apos;&#125;</span><br><span class="line">    data = request_param(param)</span><br><span class="line">    result = requests.post(url, data=data, headers=HEADERS)</span><br><span class="line">    result = result.json()</span><br><span class="line">    return result[&apos;lrc&apos;][&apos;lyric&apos;]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">client = pymongo.MongoClient(&apos;mongodb://127.0.0.1:27017/&apos;)</span><br><span class="line">db = client.song</span><br><span class="line">detail_db = db.song_detail</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def save_songs(songs):</span><br><span class="line">    for song in songs:</span><br><span class="line">        song_id = song[&apos;id&apos;]</span><br><span class="line">        song_content = find_song_content(str(song_id))</span><br><span class="line">        song_name = song[&apos;name&apos;]</span><br><span class="line">        song_arr = song[&apos;ar&apos;]</span><br><span class="line">        songer = []</span><br><span class="line">        for ar in song_arr:</span><br><span class="line">            song_dict = &#123;&apos;id&apos;: ar[&apos;id&apos;], &apos;name&apos;: ar[&apos;name&apos;]&#125;</span><br><span class="line">            songer.append(song_dict)</span><br><span class="line">        detail_db.insert(&#123;&apos;song_id&apos;: song_id, &apos;song_name&apos;: song_name,</span><br><span class="line">                          &apos;song_ar&apos;: songer, &apos;song_content&apos;: song_content&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    query_url = &apos;https://music.163.com/weapi/cloudsearch/get/web?csrf_token=&apos;</span><br><span class="line">    data = &#123;&quot;hlpretag&quot;: &quot;&lt;span class=\&quot;s-fc7\&quot;&gt;&quot;,</span><br><span class="line">            &quot;hlposttag&quot;: &quot;&lt;/span&gt;&quot;,</span><br><span class="line">            &quot;s&quot;: &quot;新说唱&quot;,</span><br><span class="line">            &quot;type&quot;: &quot;1&quot;,</span><br><span class="line">            &quot;offset&quot;: &quot;0&quot;,</span><br><span class="line">            &quot;total&quot;: &quot;true&quot;,</span><br><span class="line">            &quot;limit&quot;: &quot;30&quot;,</span><br><span class="line">            &quot;csrf_token&quot;: &quot;&quot;</span><br><span class="line">            &#125;</span><br><span class="line">    data = request_param(data)</span><br><span class="line">    referer = &apos;https://music.163.com/search/&apos;</span><br><span class="line">    HEADERS[&apos;Referer&apos;] = referer</span><br><span class="line">    result = requests.post(query_url, data=data, headers=HEADERS)</span><br><span class="line">    result = result.json()</span><br><span class="line">    songs = result[&apos;result&apos;][&apos;songs&apos;]</span><br><span class="line">    song_count = result[&apos;result&apos;][&apos;songCount&apos;]</span><br><span class="line">    save_songs(songs)</span><br><span class="line"></span><br><span class="line">    # 抓取其它页内容</span><br><span class="line">    for num in range(int(song_count / 30 - 1)):</span><br><span class="line">        data_other = &#123;&quot;hlpretag&quot;: &quot;&lt;span class=\&quot;s-fc7\&quot;&gt;&quot;,</span><br><span class="line">                      &quot;hlposttag&quot;: &quot;&lt;/span&gt;&quot;,</span><br><span class="line">                      &quot;s&quot;: &quot;新说唱&quot;,</span><br><span class="line">                      &quot;type&quot;: &quot;1&quot;,</span><br><span class="line">                      &quot;offset&quot;: str((num + 1) * 30),</span><br><span class="line">                      &quot;total&quot;: &quot;false&quot;,</span><br><span class="line">                      &quot;limit&quot;: &quot;30&quot;,</span><br><span class="line">                      &quot;csrf_token&quot;: &quot;&quot;</span><br><span class="line">                      &#125;</span><br><span class="line">        data_other = request_param(data_other)</span><br><span class="line">        result_other = requests.post(</span><br><span class="line">            query_url, data=data_other, headers=HEADERS)</span><br><span class="line">        result_other = result_other.json()</span><br><span class="line">        songs_other = result_other[&apos;result&apos;][&apos;songs&apos;]</span><br><span class="line">        save_songs(songs_other)</span><br></pre></td></tr></table></figure>
+<p><br>一般情况下网站都是有反抓取策略的，现在来看一下云音乐的方式。</p>
+<p>主要包括以下几个方面：</p>
+<ol>
+<li>AES（Advanced Encryption Standard）对称加密算法是一种高级数据加密标准，是美国联邦政府采用的一种区块加密标准，可有效抵制针对DES的攻击算法。特点：密钥建立时间短、灵敏性好、内存需求低、安全性高。</li>
+<li>RSA加密算法是一种非对称加密算法。在公开密钥加密和电子商业中RSA被广泛使用。到目前为止，世界上还没有任何可靠的攻击RSA算法的方式。只要其钥匙的长度足够长，用RSA加密的信息实际上是不能被解破的。</li>
+<li>动态16位随机数。</li>
+<li>RSA是非对称加密，无法通过encSecKey解密出入参，没有入参也就无法加密生成params，所以只能通过chrome调试js每个接口，观察请求的构造。</li>
+</ol>
+<p>理解了以上步骤就可以自由下载内容了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/10/01/python/python_spider_music/" data-id="cjocl45gl001uf8stlvxde22b" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-feel/opentest" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/31/feel/opentest/" class="article-date">
+  <time datetime="2018-08-31T16:00:00.000Z" itemprop="datePublished">2018-09-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/31/feel/opentest/">有感测试公开课</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="测试公开课-测试体系"><a href="#测试公开课-测试体系" class="headerlink" title="测试公开课-测试体系"></a>测试公开课-测试体系</h2><p>之前也听了一些测试分享公开课，总的来说这次影响最深，体现在其知识面广、内容贴近实际、很具有指向意义，特记录一些关键点：</p>
+<ol>
+<li>康威定律</li>
+</ol>
+<ul>
+<li>第一定律<br>组织沟通方式会通过系统设计表达出来</li>
+<li>第二定律<br>时间再多一件事情也不可能做的完美，但总有时间做完一件事情</li>
+<li>第三定律<br>线型系统和线型组织架构间有潜在的异质同态特性</li>
+<li>第四定律<br>大的系统组织总是比小系统更倾向于分解</li>
+</ul>
+<blockquote>
+<p>摘录至<a href="https://yq.aliyun.com/articles/8611" target="_blank" rel="noopener">https://yq.aliyun.com/articles/8611</a></p>
+</blockquote>
+<ol start="2">
+<li>测试向左、右移</li>
+</ol>
+<p>互联网不断发展、业务需求越来越复杂，导致测试不能在只关注自身领域，需要你了解相关联干系人的活动，如：你需要去了解开发知识、流程、设计，去帮助他们提高。去监控产品上线后的情况</p>
+<ol start="3">
+<li>测试价值</li>
+</ol>
+<p>我们不能停留在疲于应付业务测试原始的阶段，可以将重心体现在我们的人的价值上，如：用例设计编写、测试架构、测试流程机制。<strong>把重复机械工作交给机器去完成</strong></p>
+<ol start="4">
+<li>建立质量体系</li>
+</ol>
+<p>测试已经深入到研发阶段每个环节，在下面三个环节中都要有相应的机制去支撑，相比而言，研发的质量至关重要</p>
+<ul>
+<li>研发阶段的质量保证</li>
+<li>测试阶段的质量保证</li>
+<li>发布后的质量监控</li>
+</ul>
+<p>三个阶段的质量保证环环相扣</p>
+<ol start="5">
+<li><p>分层测试思路，充分利用层次优势，保证测试阶段质量</p>
+</li>
+<li><p>解决常说的UI自动化难点：控制UI自动化用例规模，以核心用例为主，自动化遍历和接口测试为辅助</p>
+</li>
+<li><p>测试技术</p>
+</li>
+</ol>
+<ul>
+<li>数据跟踪</li>
+<li>复用沉碇</li>
+<li>让机器学会信息查找</li>
+</ul>
+<ol start="8">
+<li>测试开发工程师</li>
+</ol>
+<p>并不字面开发意思，而是用类似开发手段去做测试</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.whatistest.com/2018/08/31/feel/opentest/" data-id="cjocl45fr000pf8st183m5bq1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/feel/">feel</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">__('next') &raquo;</a>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/essay/">essay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/feel/">feel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macaca/">macaca</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/open-stf/">open-stf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/">opencv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tensorflow/">tensorflow</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/appium/" style="font-size: 12.5px;">appium</a> <a href="/tags/essay/" style="font-size: 17.5px;">essay</a> <a href="/tags/feel/" style="font-size: 10px;">feel</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/macaca/" style="font-size: 15px;">macaca</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/open-stf/" style="font-size: 17.5px;">open-stf</a> <a href="/tags/opencv/" style="font-size: 10px;">opencv</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/tensorflow/" style="font-size: 10px;">tensorflow</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/11/11/java8IntStream/">java8 handle multi foreach</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/java8filter/">java8 multi filters</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/python/python_cli/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/python/python_datetime/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/11/opencv/opencvinstall/">opencv安装(debian)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 chuanqiong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
